@@ -6,6 +6,19 @@ body {
   color: rgb(65, 75, 60);
   font-family: 'Bitter', serif;
 }
+h2 {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  transform-origin: center left;
+}
+button, input {
+  margin: 3px;
+  color: #7a6a6a;
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 3px;
+  height: 1.8em;
+}
 .column() {
   display: flex;
   flex-direction: column;
@@ -45,31 +58,7 @@ body {
   .square {
     justify-self: stretch;
     border: 2px dashed black;
-
-    &#s00 {
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 1;
-      grid-row-end: 2;
-    }
-    &#s10 {
-      grid-column-start: 2;
-      grid-column-end: 3;
-      grid-row-start: 1;
-      grid-row-end: 2;
-    }
-    &#s01 {
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 2;
-      grid-row-end: 3;
-    }
-    &#s11 {
-      grid-column-start: 2;
-      grid-column-end: 3;
-      grid-row-start: 2;
-      grid-row-end: 3;
-    }
+    cursor: pointer;
 
     &.active {
       background-color: lightgreen;
@@ -77,16 +66,8 @@ body {
     }
   }
 }
-h2 {
-  position: absolute;
-  top: 3%;
-  left: 5%;
-  transform-origin: center left;
-}
-button, input {
-  margin: 3px;
-  color: #7a6a6a;
-  border: 1px solid rgb(210, 210, 210);
-  border-radius: 3px;
-  height: 2em;
+.programmers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }

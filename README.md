@@ -12,7 +12,7 @@ Commit your code regularly and meaningfully. This helps both you and your team l
 
 ### Description
 
-This project includes a `src/components` folder with several React components, which are imported into `index.js` and rendered to the DOM. In their current form these components are stateless, display hard-coded information and are unable to change. You will make the app interactive by going into each component adding state and fleshing out event handlers to allow the users of the app to change state by interacting with the DOM.
+This project includes a `src/components` folder containing several React components. In their current form these components are stateless, display hard-coded information only and are unable to change. You will make the app interactive by going into each component, adding state and fleshing out event handlers to allow the users of the app to update state by interacting with the DOM.
 
 ## Instructions
 
@@ -30,19 +30,19 @@ This project includes a `src/components` folder with several React components, w
 
 ### Task 2a: Minimum Viable Product
 
-1. Each component has the required state and no more. (Avoid redundant state!)
+1. Each component has the required slices of state.
 2. Each component's event handlers allow the user of the app to update state.
 3. Updated state is correctly reflected in the DOM for each component.
 
 #### Steps
 
-- [ ] You will go into each component inside `src/components`. They all need work!
-- [ ] It's recommended that you work on the components in the same order in which they appear on the page (to go from easiest challenge to hardest challenge).
-- [ ] Each component includes specific instructions on what to do. Read these instructions carefully.
-- [ ] For each component, the instructions can be summarized as:
-    1. Create one (or more) slices of component state using the state hook.
-    2. Fix the JSX so it displays information derived from state, instead of hard-coded data.
-    3. Fix the event handlers so they allow the user to update state by interacting with the DOM.
+- [ ] You will add functionality to all components inside inside `src/components`.
+- [ ] Work on the components **in the same order in which they display in Chrome** (to go from easiest challenge to hardest).
+- [ ] Each file includes a set of instructions, which can be summarized as:
+  - Watch the video demoing the finished component, and think about how much state is needed.
+  - Create the necessary slices of component state using the state hook.
+  - Fix the JSX so it displays information derived from state, instead of hard-coded data.
+  - Fix the event handlers so they allow the user to update state by interacting with the page.
 
 ### Task 2b: Exit Ticket
 
@@ -56,7 +56,7 @@ After finishing your required elements, you can push your work further. These go
 
 #### Stretch Goal 1 (To-Do List)
 
-Create a `Todos.js` file inside `src/components`. Find a tutorial online on how to build a to-do list in React using component state (no Redux!), and implement it. We should be able to add to-do items to a list, and cross out or remove completed to-dos.
+Create a `Todos.js` file inside `src/components`. Find a tutorial online on how to build a to-do list in React using component state (no Redux!), and implement it. We should be able to render a list of to-dos, and cross out (or remove) individual to-dos to mark them complete.
 
 #### Stretch Goal 2 (Tic-Tac-Toe)
 
