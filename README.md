@@ -12,7 +12,7 @@ Commit your code regularly and meaningfully. This helps both you and your team l
 
 ### Description
 
-This project includes a `src/components` folder containing several React components. In their current form these components are stateless, display hard-coded information only and are unable to change. You will make the app interactive by going into each component, adding state and fleshing out event handlers to allow the users of the app to update state by interacting with the DOM.
+This project includes a `src/components` folder containing several React components. In their current form these components are stateless and display hard-coded information only. You will make the app interactive by going into each component, adding state and implementing event handlers and helper functions to allow the users of the app to update state by interacting with the page.
 
 ## Instructions
 
