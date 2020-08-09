@@ -16,5 +16,15 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdaSchool/react-stateful-widgets.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/LambdaSchool/react-stateful-widgets/issues"
+  },
+  "homepage": "https://github.com/LambdaSchool/react-stateful-widgets#readme"
 }
