@@ -9,7 +9,7 @@ the things that change in this widget? Give it some thought before continuing re
 
 Our first impulse might be to say 2 different states:
   - Whether the spinner is visible or not (perhaps this could be a boolean).
-  - Whether the text of the button reads "Show spinner" or "Hide spinner".
+  - Whether the text of the button reads "Show Spinner" or "Hide Spinner".
 
 But a single slice of state is all that's needed here: whether spinner is on or not.
 The text of the button can be derived from the value of that one slice of state.
@@ -52,7 +52,7 @@ export default function Spinner() {
       {
         true && <div className='spinner'>--+--</div> /* STEP 2 */
       }
-      <button onClick={toggleSpinner}>Hide spinner</button> {/* STEP 3 */}
+      <button onClick={toggleSpinner}>Hide Spinner</button> {/* STEP 3 */}
     </div>
   );
 }
