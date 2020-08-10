@@ -18,7 +18,7 @@ STEP 1:
   We should initialize this state to the empty string.
 
 STEP 2:
-  Make the color of the text be royalblue if the length of 'inputValue' goes over ten.
+  Make the color of the text be crimson if the length of 'inputValue' goes over ten.
 
 STEP 3:
   Interpolate the value of the input inside this <div />. How can we make it show in ALL CAPS?
