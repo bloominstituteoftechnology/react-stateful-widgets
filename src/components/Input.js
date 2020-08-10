@@ -27,7 +27,11 @@ STEP 4:
   Set the value of the input -found inside the event object- into state.
 
 STEP 5:
-  What should we do inside this click handler?
+  Set the input value in state to be empty string. The reset still won't work, though! See the next step.
+
+STEP 6:
+  For the input to reset correctly, it needs to "drink" its value from state!
+  We need to add an extra prop to the input element like so: value={inputValue}
 */
 
 import React from 'react'; /* STEP 0 */
@@ -57,7 +61,7 @@ export default function Input() {
       <h2>Input</h2>
       <div style={style}></div> {/* STEP 3 */}
       <div>
-        <input type='text' onChange={changeInput} />
+        <input type='text' onChange={changeInput} /> {/* STEP 6 */}
         <button onClick={reset}>Reset</button>
       </div>
     </div>
