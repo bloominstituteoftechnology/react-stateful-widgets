@@ -46,7 +46,7 @@ export default function Programmers() {
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',
-    color: 'royalblue', // 🤔
+    color: idValue === null ? 'royalblue' : 'yellow' // 🤔 
   };
 
   return (
@@ -67,7 +67,7 @@ export default function Programmers() {
       {
         // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
         // Pseudo-code: if the currently featured id is truthy render div 1, otherwise render div 2. Fix!
-        false
+        idValue != null
           ? <div style={style}>🎉 Let&apos;s celebrate {getNameOfFeatured()}! 🥳</div>
           : <div style={style}>Pick an awesome programmer</div>
       }
