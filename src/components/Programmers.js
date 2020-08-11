@@ -24,24 +24,29 @@ const listOfAwesome = [
   { id: '6', name: 'Carol Shaw' },
 ];
 
+
+
+
 export default function Programmers() {
   // We'll have to use the state hook twice, as we need two slices of state.
   // The programmers on the one hand, and the id of the featured programmer on the other.
-
+    
   const [programmers, setProgrammers] = useState(listOfAwesome)
   const [programmerID, setProgrammerID] = useState ()
 
-  const getNameOfFeatured = () => {
+  const getNameOfFeatured = (programmers, programmerID) => {
     // This is not an event handler but a helper function. See its usage below.
     // It's going to need information from both slices of state!
     // Using the currently celebrated id, find inside the programmers slice of state
     // the _name_ of the currently celebrated programmer, and return it.
+    let programmerName = programmers[programmerID - 1].name
+    return programmerName
   };
 
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',
-    color: 'royalblue', // 🤔
+    color: programmerID ? 'royalblue' : 'red' // 🤔
   };
 
   return (
@@ -52,9 +57,9 @@ export default function Programmers() {
           /* Nasty bug! We should map over a slice of state, instead of 'listOfAwesome'.
           We might say: "it works, though!" But if the list of programmers is not state,
           we could never add or edit programmers in the future. The list would be a static thing. ;)" */
-          listOfAwesome.map(dev =>
+          programmers.map(dev =>
             <div key={dev.id}>
-              {dev.name} <button onClick={() => { /* set the featured id passing dev.id */ }}>Feature</button>
+              {dev.name} <button onClick={() => setProgrammerID(dev.id)}>Feature</button>
             </div>
           )
         }
@@ -62,8 +67,8 @@ export default function Programmers() {
       {
         // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
         // Pseudo-code: if the currently featured id is truthy render div 1, otherwise render div 2. Fix!
-        false
-          ? <div style={style}>🎉 Let&apos;s celebrate {getNameOfFeatured()}! 🥳</div>
+        programmerID
+          ? <div style={style}>🎉 Let&apos;s celebrate {getNameOfFeatured(programmers, programmerID)}! 🥳</div>
           : <div style={style}>Pick an awesome programmer</div>
       }
     </div>

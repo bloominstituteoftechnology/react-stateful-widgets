@@ -52,13 +52,14 @@ export default function Input() {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: inputValue > 10 ? 'crimson' : 'black'
+    textTransform: 'uppercase',
+    color: (inputValue.length > 10) ? 'crimson' : 'royalblue',
   };
 
   return (
     <div className='widget-input container'>
       <h2>Input</h2>
-      <div style={style}></div> {inputValue.toUpperCase}
+      <div style={style}>{inputValue}</div> 
       <div>
         <input type='text' onChange={changeInput} value = {inputValue}/> 
         <button onClick={reset}>Reset</button>
@@ -66,3 +67,4 @@ export default function Input() {
     </div>
   );
 }
+
