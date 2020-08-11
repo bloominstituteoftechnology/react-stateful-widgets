@@ -46,7 +46,7 @@ export default function Programmers() {
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',
-    color: idValue === null ? 'royalblue' : 'yellow' // 🤔 
+    color: idValue === null ? 'royalblue' : 'orange' // 🤔 
   };
 
   return (
