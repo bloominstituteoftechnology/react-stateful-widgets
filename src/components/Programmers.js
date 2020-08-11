@@ -35,6 +35,8 @@ export default function Programmers() {
 
 
   const getNameOfFeatured = () => {
+
+    return listObject[idValue - 1].name
     // This is not an event handler but a helper function. See its usage below.
     // It's going to need information from both slices of state!
     // Using the currently celebrated id, find inside the programmers slice of state
@@ -57,7 +59,7 @@ export default function Programmers() {
           we could never add or edit programmers in the future. The list would be a static thing. ;)" */
           listObject.map(dev =>
             <div key={dev.id}>
-              {dev.name} <button onClick={() => { /* set the featured id passing dev.id */ }}>Feature</button>
+              {dev.name} <button onClick={() => { setIdValue(dev.id)}}>Feature</button>
             </div>
           )
         }
