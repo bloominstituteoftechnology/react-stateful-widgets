@@ -23,8 +23,8 @@ STEP 1:
 
 STEP 2:
   This is called a logical expression. If the expressions on both sides of the '&&' are truthy,
-  the one on the right becomes the value of the whole line. If the expression on the left of the '&&'
-  is falsy, this thing on the left becomes the value of the whole line. It's a neat little trick to render
+  the one on the right becomes the value of the whole line. If an expression on either side of the '&&'
+  is falsy, the one on the left becomes the value of the whole line. It's a neat little trick to render
   a React element (in this case the spinner) conditionally: only if the variable on the left is truthy.
 
   Replace the hard-coded 'true' with the variable that keeps track of whether spinner is on or not.
