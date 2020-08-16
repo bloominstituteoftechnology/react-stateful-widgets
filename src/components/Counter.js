@@ -20,7 +20,7 @@ STEP 0:
 
 STEP 1:
   Using the state hook, create a 'count', 'setCount' pair.
-  The 'count' state should be initialized to a number of your liking (probably zero).
+  The 'count' state should be initialized to the number zero.
 
 STEP 2:
   The 'style' object has the 'color' property hard-coded to "royalblue".
@@ -43,7 +43,7 @@ STEP 5:
   Do NOT do count--. That amounts to trying to mutate 'count' in place. This is the road to perdition.
 
 STEP 6:
-  This click handler needs to use 'setCount' to set the 'count' to be the initial number you chose.
+  This click handler needs to use 'setCount' to set the 'count' to be zero again.
 */
 
 import React from 'react'; /* STEP 0 */
