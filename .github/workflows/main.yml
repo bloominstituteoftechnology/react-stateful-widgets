@@ -1,15 +1,15 @@
-name: Widgets tests
+name: Test Project
 on:
   pull_request:
     branches: [ main ]
 jobs:
-  cypress-run:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Cypress run
+      - name: Test
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
