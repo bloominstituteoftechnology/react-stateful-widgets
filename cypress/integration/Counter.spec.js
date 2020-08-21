@@ -5,7 +5,7 @@ describe('Counter', () => {
   const count = () => cy.get('[id=count]')
   const increment = () => cy.get('[id=increment]')
   const decrement = () => cy.get('[id=decrement]')
-  const reset = () => cy.get('[id=reset]')
+  const reset = () => cy.get('[id=resetCount]')
 
   const number_0_is_even = normalize('Number 0 is even')
   const number_1_is_odd = normalize('Number 1 is odd')
@@ -19,11 +19,12 @@ describe('Counter', () => {
   describe(`Counter initial state
     These tests should be passing from the start!`, () => {
     it('contains the required elements', () => {
+      count().should('exist')
       decrement().should('exist')
       increment().should('exist')
+      reset().should('exist')
     })
     it('colors and text content are what they should be', () => {
-      reset().should('exist')
       count().should(e => {
         expect(normalize(e.text())).to.equal(number_0_is_even)
       })
