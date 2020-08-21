@@ -80,7 +80,7 @@ export default function Counter() {
       <div>
         <button id='increment' onClick={increment}>Increment</button>
         <button id='decrement' onClick={decrement}>Decrement</button>
-        <button id='reset' onClick={reset}>Reset</button>
+        <button id='resetCount' onClick={reset}>Reset</button>
       </div>
     </div>
   );
