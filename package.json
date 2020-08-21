@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "test": "cypress open"
+    "build": "parcel build src/index.html"
   },
   "license": "ISC",
   "devDependencies": {
