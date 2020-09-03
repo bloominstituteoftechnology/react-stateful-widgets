@@ -15,7 +15,7 @@ import React from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
 // There is something in the JSX right now breaking this rule...
-const listOfAwesome = [
+export const listOfAwesome = [
   { id: '1', name: 'Ada Lovelace' },
   { id: '2', name: 'Grace Hopper' },
   { id: '3', name: 'Evelyn Boyd Granville' },
@@ -39,7 +39,7 @@ export default function Programmers() {
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',
-    color: 'royalblue', // 🤔
+    color: 'royalblue', // 🤔 color turns to gold, when celebrating
   };
 
   return (
@@ -51,20 +51,22 @@ export default function Programmers() {
           We might think: "it works, though!" But if the list of programmers is not state,
           we could never add or edit programmers in the future. The list would be a static thing." */
           listOfAwesome.map(dev =>
-            <div key={dev.id}>
+            <div className='programmer' key={dev.id}>
               {dev.name} <button onClick={() => { /* in here set the featured id to be dev.id */ }}>Feature</button>
             </div>
           )
         }
       </div>
-      {
-        // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
-        // Pseudo-code: if the currently featured id is truthy render div 1, otherwise render div 2.
-        // Replace the hard-coded false with the correct variable.
-        false
-          ? <div style={style}>🎉 Let&apos;s celebrate {getNameOfFeatured()}! 🥳</div>
-          : <div style={style}>Pick an awesome programmer</div>
-      }
+      <div id='featured' style={style}>
+        {
+          // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
+          // Pseudo-code: if the currently featured id is truthy render text 1, otherwise render text 2.
+          // Replace the hard-coded false with the correct variable.
+          false
+            ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳`
+            : 'Pick an awesome programmer'
+        }
+      </div>
     </div>
   );
 }
