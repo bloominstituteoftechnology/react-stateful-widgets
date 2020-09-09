@@ -25,6 +25,8 @@ export const listOfAwesome = [
   { id: '6', name: 'Carol Shaw' },
 ];
 
+const [listOfAwesome, setListOfAwesome] = useState(``);
+
 export default function Programmers() {
   // We'll have to use the state hook twice, as we need two slices of state.
   // The programmers list on the one hand, and the id of the featured programmer on the other.
@@ -66,7 +68,7 @@ export default function Programmers() {
           // Pseudo-code: if the currently featured id is truthy render text 1, otherwise render text 2.
           // Replace the hard-coded false with the correct variable.
           id = 2 ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳` : 'Pick an awesome programmer'
-          
+
             ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳`
             : 'Pick an awesome programmer'
         }
