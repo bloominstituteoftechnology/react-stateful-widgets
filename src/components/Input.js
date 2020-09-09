@@ -39,7 +39,7 @@ import React from 'react'; /* STEP 0 */
 export default function Input() {
   /* STEP 1 */
 
-  const [inputValue, setInputValue] = useState('')
+  const [inputValue, setInputValue] = useState(``)
 
   const changeInput = evt => {
     // When the input changes, its whole value can be found inside the event object.
@@ -50,6 +50,7 @@ export default function Input() {
 
     /* STEP 4 */
   };
+  
   const reset = () => {
     /* STEP 5 */
     setInputValue('')
@@ -58,8 +59,9 @@ export default function Input() {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: inputValue.length > 10 ? 'royalblue' : 'crimson' /* STEP 2 */
+    color: inputValue.length > 10 ? 'crimson' /* STEP 2 */
   };
+
 
   console.log('length', inputValue.length)
 
@@ -73,4 +75,4 @@ export default function Input() {
       </div>
     </div>
   );
-}
+  };

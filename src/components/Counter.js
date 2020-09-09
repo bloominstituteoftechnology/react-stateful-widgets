@@ -52,7 +52,7 @@ export default function Counter() {
   /* STEP 1 */
 
   const [count, setCount] = useState(0);
-  }
+  
 
   const increment = () => {
     /* STEP 4 */
@@ -88,4 +88,4 @@ export default function Counter() {
       </div>
     </div>
   );
-
+  };

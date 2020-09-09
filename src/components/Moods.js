@@ -39,7 +39,7 @@ export default function Moods() {
   const [mood, setMood] = useState(initialMood);
   const style = {
   color: mood = happyMood ? 'royalblue' : 'crimson'
-}}
+}
 
   const makeHappy = () => {
     /* STEP 4 */
@@ -71,4 +71,4 @@ export default function Moods() {
       </div>
     </div>
   );
-
+  };
