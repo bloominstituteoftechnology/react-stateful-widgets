@@ -47,20 +47,30 @@ STEP 6:
 */
 
 import React from 'react'; /* STEP 0 */
-
+import theCount, { useState } from "react";
 export default function Counter() {
   /* STEP 1 */
-
+  const [count, setCount] = useState(0);
+  
+console.log(count);
   const increment = () => {
     /* STEP 4 */
+    setCount(count + 1);
   };
   const decrement = () => {
     /* STEP 5 */
+    setCount(count -1);
   };
   const reset = () => {
     /* STEP 6 */
+    setCount(0);
   };
-
+  const countLogic = () => {
+    if(count === 0){
+      return 'The number '+ count + ' Is Even';
+    }else
+     return count;
+  };
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
@@ -71,7 +81,8 @@ export default function Counter() {
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number 0 is even {/* STEP 3 */}
+       {/* STEP 3  Number 0 is even  */}
+       {countLogic()}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
