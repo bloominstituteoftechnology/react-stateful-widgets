@@ -65,11 +65,19 @@ console.log(count);
     /* STEP 6 */
     setCount(0);
   };
+  const styleLogic = () =>{
+    return (count % 2 ?  style2 : style);
+  }
   const countLogic = () => {
     if(count === 0){
-      return 'The number '+ count + ' Is Even';
+      return 'The number '+ count + ' Is Even!';
     }else
      return count;
+  };
+  const style2 = {
+    fontSize: '1.5em',
+    marginBottom: '0.3em',
+    color: 'crimson', /* STEP 2 */
   };
   const style = {
     fontSize: '1.5em',
@@ -80,7 +88,7 @@ console.log(count);
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
-      <div id='count' style={style}>
+      <div id='count' style={styleLogic()}>
        {/* STEP 3  Number 0 is even  */}
        {countLogic()}
       </div>
