@@ -80,6 +80,8 @@ export default function Counter() {
   }
 
 
+  
+
   // STEP 2:
   // The 'style' object has the 'color' property hard-coded to "royalblue".
   // What the value of 'color' should be instead is a ternary expression that goes like this:
