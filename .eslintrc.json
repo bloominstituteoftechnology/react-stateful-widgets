@@ -2,7 +2,7 @@
     "env": {
         "browser": true,
         "es2020": true,
-        "cypress": true
+        "cypress/globals": true
     },
     "extends": [
         "eslint:recommended",
@@ -16,7 +16,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "cypress"
     ],
     "rules": {
         "react/prop-types": 0
