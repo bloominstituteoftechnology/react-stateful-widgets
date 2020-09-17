@@ -42,12 +42,10 @@ const [activeSquare, setActiveSquare] = useState(null)
     // Set the id argument to become the active id in state
     // (unless it already is, in which case we should reset
     // the currently active square id back to initial state).
-    setActiveSquare(activeSquare === id ? null : id)
+    setActiveSquare(id)
   };
 
-const stlye = {
-  backgroundColor: "green"
-}
+
 
   return (
     <div className='widget-squares container'>
@@ -61,7 +59,7 @@ const stlye = {
             <div 
               id={id}
               key={id}
-              className={`square${getClassName(id)}`}
+              className={`square ${getClassName(id)}`}
               onClick={() =>  markActive(id)}
             >
             </div>
