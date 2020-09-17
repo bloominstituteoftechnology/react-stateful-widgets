@@ -11,7 +11,7 @@ We can only feature one awesome programmer at a time.
 Find comments below to help you along.
 */
 
-import React from 'react';
+import React, {useState} from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
 // There is something in the JSX right now breaking this rule...
@@ -27,6 +27,8 @@ export const listOfAwesome = [
 export default function Programmers() {
   // We'll have to use the state hook twice, as we need two slices of state.
   // The programmers list on the one hand, and the id of the featured programmer on the other.
+const[programmersList, setProgrammersList] = useState(listOfAwesome.name)
+const [programmerID, setProgrammerID] = useState(listOfAwesome.id)
 
   const getNameOfFeatured = () => {
     // Leave this for last!
@@ -41,6 +43,12 @@ export default function Programmers() {
     marginTop: '0.5em',
     color: 'royalblue', // 🤔 color turns to gold, when celebrating
   };
+
+  // if(programmerID === ?){
+  //   style.color = 'gold'
+  // } else{
+  //   style.color = 'royalblue'
+  // }
 
   return (
     <div className='widget-programmers container'>
