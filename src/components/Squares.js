@@ -45,6 +45,10 @@ const [activeSquare, setActiveSquare] = useState(null)
     setActiveSquare(activeSquare === id ? null : id)
   };
 
+const stlye = {
+  backgroundColor: "green"
+}
+
   return (
     <div className='widget-squares container'>
       <h2>Squares</h2>
@@ -54,11 +58,11 @@ const [activeSquare, setActiveSquare] = useState(null)
           // We might say: "it works, though!" But if the list of squares is not state,
           // we could never add squares, change squares or remove squares in the future. Fix!
           squares.map(id =>
-            <div
+            <div 
               id={id}
               key={id}
               className={`square${getClassName(id)}`}
-              onClick={() => markActive(id)}
+              onClick={() =>  markActive(id)}
             >
             </div>
           )
