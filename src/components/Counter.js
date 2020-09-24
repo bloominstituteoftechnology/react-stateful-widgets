@@ -73,7 +73,7 @@ export default function Counter() {
     marginBottom: '0.3em',
     //checking to see if even or off with module
     /* STEP 2 */
-    color: count % 2 === 0 ? 'royalblue' : 'crimson',
+    color: count % 2 === 0 ? 'crimson' : 'royalblue',
   };
 
   // STEP 3
