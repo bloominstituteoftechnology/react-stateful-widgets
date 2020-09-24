@@ -59,19 +59,21 @@ export default function Counter() {
   const decrement = () => {
     /* STEP 5 */
     // setCount(count - 1);
-    //checking if the value of count is > 0
+    //checking if the value of count is > 0 using expression
     setCount(count > 0 ? count - 1 : 0);
   };
   const reset = () => {
     /* STEP 6 */
-    setCount(0);
+    setCount(count > 0 ? setCount(0) : 0);
+    //setCount(0);
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
     //checking to see if even or off with module
-    color: count % 2 === 0 ? 'royalblue' : 'crimson' /* STEP 2 */,
+    /* STEP 2 */
+    color: count % 2 === 0 ? 'royalblue' : 'crimson',
   };
 
   // STEP 3
