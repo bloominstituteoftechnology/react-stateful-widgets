@@ -40,21 +40,18 @@ STEP 4:
 import React from 'react'; /* STEP 0 */
 
 export default function Spinner() {
-/* STEP 1 */
-
+  /* STEP 1 */
+  const { spinnerOn, setSpinnerOn } = true
   const toggleSpinner = () => {
-  /* STEP 4 */
+    /* STEP 4 */
   };
 
-  return (
-    <div className='widget-spinner container'>
-      <h2>Spinner</h2>
-      {
-        true && <div id='spinner' className='spinner'>--+--</div> /* STEP 2 */
-      }
-      <button id='toggleSpinner' onClick={toggleSpinner}>
-        Hide Spinner {/* STEP 3 */}
-      </button>
-    </div>
-  );
+  return (<div className='widget-spinner container' >
+    <h2> Spinner </h2> {
+      true && < div id='spinner' className='spinner' > {spinnerOn} {/* STEP 2 */} </div>} 
+    
+        <button id='toggleSpinner' onClick={toggleSpinner} >
+            Hide Spinner {setSpinnerOn === false} { /* STEP 3 */} </button> 
+        </div>
+    );
 }
