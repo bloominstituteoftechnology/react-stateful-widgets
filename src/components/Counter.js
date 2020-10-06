@@ -17,7 +17,7 @@ The other things can simply be _derived_ from the count itself.
 
 STEP 0:
   Start by studying the component below, and importing the state hook.
-
+import state hook
 STEP 1:
   Using the state hook, create a 'count', 'setCount' pair.
   The 'count' state should be initialized to the number zero.
