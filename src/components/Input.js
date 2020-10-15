@@ -38,6 +38,7 @@ import React from 'react'; /* STEP 0 */
 
 export default function Input() {
   /* STEP 1 */
+  const [inputValue, setInputValue] = ""
 
   const changeInput = evt => {
     // When the input changes, its whole value can be found inside the event object.
