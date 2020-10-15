@@ -78,7 +78,7 @@ export default function Counter() {
       <h2>Counter</h2>
       <div id='count' style={style}>
         {/* STEP 3 */}
-        Number {count} is {count % 2 ? 'odd' : 'even'}. 
+        Number {count} is {count % 2 === 0 ? 'even' : 'odd'}. 
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
