@@ -51,7 +51,7 @@ import React, { useState } from 'react'; /* STEP 0 */
 export default function Counter() {
   /* STEP 1 */
   const [count, setCount] = useState(0);
-  // const [evenOdd, setEvenOdd] = useState('even');
+  const [evenOdd, setEvenOdd] = useState(true);
 
   const increment = count => {
     /* STEP 4 */
@@ -72,30 +72,30 @@ export default function Counter() {
     // color: 'royalblue', /* STEP 2 */
   };
 
-  if (count === 'even') {
+  if (count === evenOdd) {
     styles.color = "royalBlue";
   }
   else {
     styles.color = "crimson";
   };
   
-  const evenNum = 'even';
-  const oddNum = 'odd';
+  // const evenNum = 'even';
+  // const oddNum = 'odd';
 
-  // function evenOddCount() {
+  function evenOddCount() {
   
-  //   if(count%2!=0) {
-  //     return <evenNum />;
-  //   } else {
-  //     return <oddNum />;
-  //   }
-  // }
+    if(count%2!=0) {
+      setEvenOdd('even')
+    } else {
+      setEvenOdd('odd')
+    }
+  }
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={styles}>
-        Number {count} is even.
+        Number {count} is {() => evenOddCount(evenOdd)}.
         {/* {() => evenOddCount}. */}
       </div>
       <div>

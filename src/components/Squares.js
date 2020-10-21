@@ -14,12 +14,16 @@ Only one square (or none) can be active at any given point.
 Find comments below to help you along.
 */
 
-import React from 'react';
+import React, { useState } from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
 const listOfSquareIds = ['sqA', 'sqB', 'sqC', 'sqD'];
 
 export default function Squares() {
+
+  const [squares, setSquares] = useState(listOfSquareIds);
+  const [activeSquare, setActiveSquare] = useState(null);
+ 
   // Use the state hook twice, as we need two slices of state: 'squares' and
   // 'activeSquare'. One holds the _array_ of square ids, and the other keeps track
   // of the currently active square. On page load there's no active square,
