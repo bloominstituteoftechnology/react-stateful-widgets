@@ -45,46 +45,49 @@ STEP 5:
 STEP 6:
   This click handler needs to use 'setCount' to set the 'count' to be zero again.
 */
-
-import React, { useState } from 'react'; /* STEP 0 */
+import React, { useState } from "react"; /* STEP 0 */
 
 export default function Counter() {
   /* STEP 1 */
-const [count, setCount]=useState(0)
-console.log(count);
+  const [count, setCount] = useState(0);
+  console.log(count);
   const increment = () => {
-    /* STEP 4 */
-    let CurrentCount = count + 1;
-    setCount(CurrentCount);
+    let currCount = count + 1;
+    setCount(currCount);
   };
   const decrement = () => {
+    let currCount = count - 1;
+    setCount(currCount);
     /* STEP 5 */
-    let CurrentCount = count - 1;
-    setCount(CurrentCount);
   };
   const reset = () => {
-    /* STEP 6 */
     setCount(0);
+    /* STEP 6 */
   };
 
   const style = {
-    fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color:(count % 2 === 0)? 'royalblue' : 'crimson', /* STEP 2 */
-    
+    fontSize: "1.5em",
+    marginBottom: "0.3em",
+    color: count % 2 === 0 ? "royalblue" : "crimson" /* STEP 2 */,
   };
 
   return (
-    <div className='widget-counter container'>
+    <div className="widget-counter container">
       <h2>Counter</h2>
-      <div id='count' style={style}>
-        number {count} is {(count % 2 === 0) ? 'even': 'odd' } {/* STEP 3 */}
-        
+      <div id="count" style={style}>
+        Number {count} is {count % 2 === 0 ? "even" : "odd"}
+        {/* STEP 3 */}
       </div>
       <div>
-        <button id='increment' onClick={increment}>Increment</button>
-        <button id='decrement' onClick={decrement}>Decrement</button>
-        <button id='resetCount' onClick={reset}>Reset</button>
+        <button id="increment" onClick={increment}>
+          Increment
+        </button>
+        <button id="decrement" onClick={decrement}>
+          Decrement
+        </button>
+        <button id="resetCount" onClick={reset}>
+          Reset
+        </button>
       </div>
     </div>
   );
