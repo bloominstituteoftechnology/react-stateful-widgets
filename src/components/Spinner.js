@@ -47,8 +47,9 @@ export default function Spinner() {
     /* STEP 4 */
     if (spinnerOn === true) {
       setSpinnerOn(false);
-    } else
+    } else {
       setSpinnerOn(true);
+    }
   };
 
   return (
