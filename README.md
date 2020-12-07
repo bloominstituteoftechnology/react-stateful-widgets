@@ -18,16 +18,16 @@ This project includes a `src/components` folder containing several React compone
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN fork of the repository using your terminal.
-- [ ] CD into the project base directory.
-- [ ] Download project dependencies by running `npm install`.
-- [ ] Start up the app using `npm start`.
-- [ ] Optionally run tests using `npm test`. (The app must be running on `http://localhost:1234`)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [1] Create a forked copy of this project.
+- [1] Add your team lead as collaborator on Github.
+- [1] Clone your OWN fork of the repository using your terminal.
+- [1] CD into the project base directory.
+- [1] Download project dependencies by running `npm install`.
+- [1] Start up the app using `npm start`.
+- [1] Optionally run tests using `npm test`. (The app must be running on `http://localhost:1234`)
+- [1] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [1] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [1] Push commits: `git push origin <firstName-lastName>`.
 
 ### Task 2a: Minimum Viable Product
 
