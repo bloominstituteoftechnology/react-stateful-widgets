@@ -18,16 +18,16 @@ This project includes a `src/components` folder containing several React compone
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN fork of the repository using your terminal.
-- [ ] CD into the project base directory.
-- [ ] Download project dependencies by running `npm install`.
-- [ ] Start up the app using `npm start`.
-- [ ] Optionally run tests using `npm test`. (The app must be running on `http://localhost:1234`)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add your team lead as collaborator on Github.
+- [x] Clone your OWN fork of the repository using your terminal.
+- [x] CD into the project base directory.
+- [x] Download project dependencies by running `npm install`.
+- [x] Start up the app using `npm start`.
+- [x] Optionally run tests using `npm test`. (The app must be running on `http://localhost:1234`)
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [x] Push commits: `git push origin <firstName-lastName>`.
 
 ### Task 2a: Minimum Viable Product
 
@@ -37,9 +37,9 @@ This project includes a `src/components` folder containing several React compone
 
 #### Steps
 
-- [ ] You will add functionality to all components inside inside `src/components`.
-- [ ] Work on the components **in the same order in which they display in Chrome** (to go from easiest challenge to hardest).
-- [ ] Each file includes a link to a video, and a set of instructions which can be summarized as:
+- [x] You will add functionality to all components inside inside `src/components`.
+- [x] Work on the components **in the same order in which they display in Chrome** (to go from easiest challenge to hardest).
+- [x] Each file includes a link to a video, and a set of instructions which can be summarized as:
   - Watch the video demoing the finished component, and think about how much state is needed.
   - Create the necessary slices of component state using the state hook.
   - Fix the JSX so it displays information derived from state, instead of hard-coded data.
@@ -65,4 +65,4 @@ The move by the computer should probably be random if the previous checks turn o
 
 ## Submission Format
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+- [x] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
