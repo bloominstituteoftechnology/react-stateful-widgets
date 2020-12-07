@@ -53,27 +53,29 @@ export default function Counter() {
   /* STEP 1 */
 const [count, setCount] = useState(0) 
 
+
 const increment = () => {
-  return count === setCount +1
+  return setCount(count +1)
   };
   const decrement = () => {
-   return count === setCount -1
+    return setCount(count -1)
   };
   const reset = () => {
-  return count === setCount
+    return setCount(0)
   }
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: (increment === 'even' ? 'royalblue' : 'crimson') /* STEP 2 */
+    color: count % 2 == 0 ?  'royalblue' : 'crimson' /* STEP 2 */
   };
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number {count} is ({count === 'even' ? 'even' : 'odd'}) 
+        Number {count} is {count % 2 == 0 ? 'even' : 'odd'}
+        {/* ({count === count ? 'even' : 'odd'})  */}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
