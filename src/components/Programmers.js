@@ -25,13 +25,14 @@ export const listOfAwesome = [
 ];
 
 
-const [pioneers, setPioneers] = useState(listOfAwesome)
-const [currently, setCurrently] = useState(null)
 
 export default function Programmers() {
   // We'll have to use the state hook twice, as we need two slices of state.
   // The programmers list on the one hand, and the id of the featured programmer on the other.
-
+  
+  const [pioneers, setPioneers] = useState(listOfAwesome)
+  const [currently, setCurrently] = useState(null)
+  
   const getNameOfFeatured = () => {
     // Leave this for last!
     // This is NOT an event handler but a helper function. See its usage inside the JSX.
