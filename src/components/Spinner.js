@@ -36,24 +36,31 @@ STEP 4:
   This click handler needs to toggle the spinner by setting "whether on" to be the opposite of what it currently is.
   Do you remember the operator we use to do "not"?
 */
-
+import React from "react"
 import { useState } from "react";
  /* STEP 0 */
 
 export default function Spinner() {
- const [spinnerOn, setSpinnerOn] = useState(true)
+ const [spinnerOn,setSpinnerOn] = useState(true)
+
 
   const toggleSpinner = () => {
-      useState(!true)
+  
+     setSpinnerOn(!spinnerOn)
+     
+     
+    
+      
+    
   }
   return (
     <div className='widget-spinner container'>
       <h2>Spinner</h2>
-      {
-        {spinnerON} && <div id='spinner' className='spinner'>--{setSpinnerOn}+--</div>
-      }
+       {
+        spinnerOn === true && <div id='spinner' className='spinner'>--+--</div>
+       }
       <button id='toggleSpinner' onClick={toggleSpinner}>
-        Hide Spinner 
+        {spinnerOn ? 'Show Spinner ': 'Hide Spinner'}
       </button>
     </div>
   );
