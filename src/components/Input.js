@@ -48,7 +48,7 @@ export default function Input() {
 
     /* STEP 4 */
     console.log(evt)
-    setInputValue(value) // PROBABLY WRONG - DO NOT UNDERSTAND
+    setInputValue(value) //  DO NOT UNDERSTAND
 
 
   };
