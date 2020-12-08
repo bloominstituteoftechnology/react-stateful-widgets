@@ -8,6 +8,9 @@ import Spinner from './components/Spinner';
 import Squares from './components/Squares';
 import Programmers from './components/Programmers';
 
+// Stretch
+import Todo from './components/Todo.js'
+
 render(
   <>
     <Counter />
@@ -16,6 +19,7 @@ render(
     <Input />
     <Squares />
     <Programmers />
+    <Todo />
   </>
   ,
   document.querySelector('#root')
