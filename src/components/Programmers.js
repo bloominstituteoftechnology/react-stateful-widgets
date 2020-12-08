@@ -40,7 +40,7 @@ export default function Programmers() {
     // The beauty of closures is that we can "see" both slices of state from this region
     // of the program, without needing to inject the information through arguments.
 
-    // use id and name from listofAwesome ?
+    // use id and name from listofAwesome ??
 
   };
 
