@@ -54,7 +54,7 @@ const makeHappy = () => {
     fontSize: '1.5em',
     marginBottom: '0.3em',
     /* STEP 2 */
-    color: makeSad ?  'crimson' : 'royalblue'
+    color: mood === sadMood ?  'crimson' : 'royalblue'
   };
 
   return (
