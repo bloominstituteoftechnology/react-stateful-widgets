@@ -9,9 +9,7 @@ import Squares from './components/Squares';
 import Programmers from './components/Programmers';
 
 
-function App(props) {
-  const {}
-}
+
 render(
   <>
     <Counter />
