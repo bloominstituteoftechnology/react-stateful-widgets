@@ -58,7 +58,7 @@ export default function Programmers() {
           we could never add or edit programmers in the future. The list would be a static thing." */
           pioneers.map(dev =>
             <div className='programmer' key={dev.id}>
-              {dev.name} <button onClick={() => { /* in here set the featured id to be dev.id */ }}>Feature</button>
+              {dev.name} <button onClick={() => { setCurrently(dev.id) /* in here set the featured id to be dev.id */ }}>Feature</button>
             </div>
           )
         }
