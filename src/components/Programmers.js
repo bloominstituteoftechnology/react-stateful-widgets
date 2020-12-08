@@ -32,7 +32,7 @@ export default function Programmers() {
   
   const [pioneers, setPioneers] = useState(listOfAwesome)
   const [currently, setCurrently] = useState(null)
-  
+
   const getNameOfFeatured = () => {
     // Leave this for last!
     // This is NOT an event handler but a helper function. See its usage inside the JSX.
@@ -44,7 +44,8 @@ export default function Programmers() {
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',
-    color: 'royalblue', // 🤔 color turns to gold, when celebrating
+    color: (currently != null ? 'gold' : 'royalblue')
+    // color: 'royalblue', // 🤔 color turns to gold, when celebrating
   };
 
   return (
@@ -55,7 +56,7 @@ export default function Programmers() {
           /* Nasty bug! We should map over a slice of state, instead of 'listOfAwesome'.
           We might think: "it works, though!" But if the list of programmers is not state,
           we could never add or edit programmers in the future. The list would be a static thing." */
-          listOfAwesome.map(dev =>
+          pioneers.map(dev =>
             <div className='programmer' key={dev.id}>
               {dev.name} <button onClick={() => { /* in here set the featured id to be dev.id */ }}>Feature</button>
             </div>
