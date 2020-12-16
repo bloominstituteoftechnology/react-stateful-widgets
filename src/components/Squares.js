@@ -1,4 +1,4 @@
-/*
+/* COMPLETE
 SQUARES Instructions
 
 Watch this short video:
