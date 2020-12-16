@@ -47,7 +47,7 @@ STEP 6: COMPLETE
 */
 
 
-import React, {useState} from "react"; /* STEP 0 */
+import React, { useState } from "react"; /* STEP 0 */
 
 export default function Counter() {
   /* STEP 1 */
