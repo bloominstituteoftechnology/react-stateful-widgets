@@ -1,4 +1,4 @@
-/*
+/* COMPLETE
 SPINNER Instructions
 
 Watch this short video:
