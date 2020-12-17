@@ -13,8 +13,8 @@ Find comments below to help you along.
 
 import React, { useState } from 'react';
 
-// Use this variable ONLY to initialize a slice of state!
-// There is something in the JSX right now breaking this rule...
+// [x]Use this variable ONLY to initialize a slice of state!
+// [x]There is something in the JSX right now breaking this rule...
 export const listOfAwesome = [
   { id: '1', name: 'Ada Lovelace' },
   { id: '2', name: 'Grace Hopper' },
@@ -26,17 +26,15 @@ export const listOfAwesome = [
 
 export default function Programmers() {
   const [personId, setPersonId] = useState('1');
-  const [name, setName] = useState('Ada Lovelace');
+  // const [name, setName] = useState('Ada Lovelace');
   // [x]We'll have to use the state hook twice, as we need two slices of state.
   // [x]The programmers list on the one hand, and the id of the featured programmer on the other.
   const [awesomePeople, setAwesomePeople] = useState(listOfAwesome);
 
   const getNameOfFeatured = () => {
-    // Leave this for last!
-    // This is NOT an event handler but a helper function. See its usage inside the JSX.
-    // It's going to utilize both slices of state to return the _name_ of the featured dev.
-    // The beauty of closures is that we can "see" both slices of state from this region
-    // of the program, without needing to inject the information through arguments.
+    const nameOfFeaturedPerson = awesomePeople.find(person => person.id === personId);
+
+    return nameOfFeaturedPerson.name;
   };
 
   const style = {
@@ -50,7 +48,7 @@ export default function Programmers() {
       <h2>Programmers</h2>
       <div className='programmers'>
         {
-          /* Nasty bug! We should map over a slice of state, instead of 'listOfAwesome'.
+          /*[x] Nasty bug! We should map over a slice of state, instead of 'listOfAwesome'.
           We might think: "it works, though!" But if the list of programmers is not state,
           we could never add or edit programmers in the future. The list would be a static thing." */
          awesomePeople.map(dev =>
@@ -61,7 +59,7 @@ export default function Programmers() {
         }
       </div>
       <div id='featured' style={style}>
-        { personId ? `🎉 Let's celebrate ${getNameOfFeatured(name)}! 🥳`: 'Pick an awesome programmer'
+        { personId ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳`: 'Pick an awesome programmer'
         }
       </div>
     </div>
