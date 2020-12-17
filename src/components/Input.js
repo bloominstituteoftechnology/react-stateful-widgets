@@ -1,4 +1,4 @@
-/*
+/* COMPLETE
 INPUT Instructions
 
 Watch this short video:
@@ -10,7 +10,7 @@ the things that change in this widget? Give it some thought before continuing re
 Yup, a single slice of state is enough! In it we'll keep track of the value of the input.
 Whether the text shows royalblue or crimson can be derived from the length of the value of the input.
 
-STEP 0:
+STEP 0: COMPLETE
   Study the component below, and import the state hook.
 
 STEP 1: COMPLETE
@@ -29,7 +29,7 @@ STEP 4: COMPLETE
 STEP 5: COMPLETE
   Set the input value in state to be empty string. The reset still won't work, though! See the next step.
 
-STEP 6:
+STEP 6: COMPLETE
   For the input to reset correctly, it needs to "drink" its value from state!
   We need to add an extra prop to the <input /> element like so: value={inputValue}
 */
@@ -44,13 +44,12 @@ export default function Input() {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
     const { value } = evt.target;
-    // console.log(evt); // where is the "value property"?
+    console.log(evt.target); 
     setInputValue(value);
     // console.log(value); // works
     console.log("State: ", inputValue);
     /* STEP 4 */
   };
-
 
   const reset = () => {
     /* STEP 5 */
@@ -75,6 +74,3 @@ export default function Input() {
     </div>
   );
 }
-
-// For the input to reset correctly, it needs to "drink" its value from state!
-// We need to add an extra prop to the <input /> element like so: value={inputValue}
