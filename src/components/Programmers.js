@@ -41,7 +41,7 @@ export default function Programmers() {
     let match = programmersList.find(dev => dev.id === featuredId);
 
     if (match === undefined) {
-      return "match is undefined";
+      return undefined;
     }
     return match.name;
   }; // returns name string
@@ -49,7 +49,7 @@ export default function Programmers() {
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',
-    color: featuredId === undefined ? 'royalblue' : 'gold',  // 🤔 color turns to gold, when celebrating
+    color: featuredId ? 'gold' : 'royalblue',  // 🤔 color turns to gold, when celebrating
   };
 
   return (
@@ -72,7 +72,7 @@ export default function Programmers() {
           // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
           // Pseudo-code: if the currently featured id is truthy render text 1, otherwise render text 2.
           // Replace the hard-coded false with the correct variable.
-          featuredId !== undefined 
+          featuredId
             ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳`
             : 'Pick an awesome programmer'
         }
