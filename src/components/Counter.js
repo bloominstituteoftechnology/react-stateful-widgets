@@ -91,13 +91,13 @@ export default function Counter() {
         Number {count} is {() => evenOddCount(evenOdd)}.
       </div>
       <div>
-        <button id="increment" onClick={increment}>
+        <button id="increment" onClick={() => increment(count)}>
           Increment
         </button>
-        <button id="decrement" onClick={decrement}>
+        <button id="decrement" onClick={() => decrement(count)}>
           Decrement
         </button>
-        <button id="resetCount" onClick={reset}>
+        <button id="resetCount" onClick={() => reset(0)}>
           Reset
         </button>
       </div>
