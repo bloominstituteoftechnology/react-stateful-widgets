@@ -16,10 +16,10 @@ But a single slice of state is all that's needed here: the count!
 The other things can simply be _derived_ from the count itself.
 
 STEP 0:
-  Start by studying the component below, and importing the state hook.
+  [x] Start by studying the component below, and importing the state hook.
 
 STEP 1:
-  Using the state hook, create a 'count', 'setCount' pair.
+  [x] Using the state hook, create a 'count', 'setCount' pair.
   The 'count' state should be initialized to the number zero.
 
 STEP 2:
@@ -45,11 +45,10 @@ STEP 5:
 STEP 6:
   This click handler needs to use 'setCount' to set the 'count' to be zero again.
 */
-
-import React from 'react'; /* STEP 0 */
+import React, { useState } from 'react';
 
 export default function Counter() {
-  /* STEP 1 */
+  const [count, setCount] = useState(0);
 
   const increment = () => {
     /* STEP 4 */
@@ -63,8 +62,8 @@ export default function Counter() {
 
   const style = {
     fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    marginBottom: '0.3em', 
+    color: count % 2 === 0 ? "royalblue" : "crimson", /* STEP 2 */
   };
 
   return (
