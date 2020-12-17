@@ -34,7 +34,7 @@ const initialMood = 'Not sure how I feel';
 const happyMood = 'Quite happy!';
 const sadMood = 'Rather sad';
 
-export default function Moods() {
+export default function Moods() {c
   /* STEP 1 */
 
   const makeHappy = () => {
