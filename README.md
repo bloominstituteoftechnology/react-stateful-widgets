@@ -1,5 +1,5 @@
 # Module Project: React Components and Components State
-
+Class demonstration by Kalina
 This project allows you to practice the concepts and techniques learned in this module and apply them in a concrete project. This module explored React components and component state. During the module, you studied what React is, what React components are and how to build them, what state is and how to make a component stateful, and how to update component state with click handlers. In this project you will demonstrate proficiency of these subjects and principles by fleshing out several stateful components.
 
 ## Introduction
