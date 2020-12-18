@@ -34,13 +34,14 @@ export default function Squares() {
     // Right-click and "inspect element" on the square to see its effect.
     // let squareInQuestion = document.querySelector(id);
 
-  //   if (id === activeSquare) {
-  //     return "active"
-  //   } else {
-  //     return "";
-  //   };
-  // };
-
+        /*
+        if (id === activeSquare) {
+          return "active"
+        } else {
+          return "";
+        };
+        */
+      
   return `${id === activeSquare ? "active" : ""}`;
 
   };
@@ -57,17 +58,17 @@ export default function Squares() {
   // }; // I thought this helper function might have been better to determine if the square is selected active aka. has class name 'active'.  Takes id, returns T/F
 
   const markActive = id => {
-    // This is a helper used inside an _inlined_ click handler (see below).
-    // Set the id argument to become the active id in state
-    // (unless it already is, in which case we should reset
-    // the currently active square id back to initial state).
-  //   if (getClassName(id) === "" ) {
-  //     setActiveSquare(id);
-  //     console.log("State: ", activeSquare);
-  //   } else if (getClassName(id) === "active") {
-  //     setActiveSquare(null);
-  //   };
-  // };
+    /* This is a helper used inside an _inlined_ click handler (see below). Set the id argument to become the active id in state
+    (unless it already is, in which case we should reset the currently active square id back to initial state).*/
+
+    /*
+    if (getClassName(id) === "" ) {
+      setActiveSquare(id);
+      console.log("State: ", activeSquare);
+    } else if (getClassName(id) === "active") {
+      setActiveSquare(null);
+    };
+  };*/
 
   id === activeSquare ? setActiveSquare(null) : setActiveSquare(id);
   console.log("State: ", activeSquare);
