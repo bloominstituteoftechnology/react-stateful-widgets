@@ -30,12 +30,13 @@ STEPS 4, 5, 6:
 
 import React, { useState } from "react";
 
-const [mood, setMood] = useState(initialMood);
 const initialMood = "Not sure how I feel";
 const happyMood = "Quite happy!";
 const sadMood = "Rather sad";
 
 export default function Moods() {
+  const [mood, setMood] = useState(initialMood);
+
   const makeHappy = () => {
     setMood(happyMood);
   };
