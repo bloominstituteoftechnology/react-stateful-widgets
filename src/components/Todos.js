@@ -4,7 +4,10 @@ export default function Todo() {
   // the HOOKS ------------------------------------------------------------------------------------
   const [inputValue, setInputValue] = useState("");  // the input string in the input field
   const [todoListCompleted, setTodoListCompleted] = useState([]); 
-  const [todoList, setTodoList] = useState(["a", "b", "c"]);
+  const [todoList, setTodoList] = useState([]);
+
+  // const example = useState("hello");
+  // console.log(example);
 
   // the HELPER FUNCTIONS -------------------------------------------------------------------------
   const changeInput = evt => {
@@ -15,32 +18,40 @@ export default function Todo() {
 
       setInputValue(value); // set inputValue to value
 
-      console.log("Todo assigned to inputValue: ", inputValue);
+      console.log("inputValue from changeInput: ", inputValue);
 
   }; // assigns typed todo to the inputValue
 
   const addTodoList = () => {
 
-      setTodoList(todoList.push(inputValue));  //  QUESTION:  You always want to use the set so that the DOM hook knows that a change has been made?  
+      // setTodoList(todoList.push(inputValue));  CANNOT MUTATE THE VARIABLE DIRECTLY
+      
+      //  QUESTION:  You always want to use the set so that the DOM hook knows that a change has been made?  
 
-      console.log(`todoList : ${todoList}`);
+      setTodoList([...todoList, inputValue]);
 
   }; // adds the todo to the todoList
 
   const addToComplete = (todo) => {
-    // id === activeSquare ? setActiveSquare(null) : setActiveSquare(id);
-    // console.log("State: ", activeSquare);
-
-
     // This helper function gets called when the button "Complete" is clicked.
-    // The goal:  It will add the element to the todoListCompleted array & delete it from the todoList array.
-    
-    setTodoListCompleted(todoListCompleted.push(todo)); // add todo to the todoListCompleted array
+    // It will add the element to the todoListCompleted array & delete it from the todoList array.
+  
+    setTodoListCompleted([...todoListCompleted, todo]); // adds the todo to the todoListCompleted array
 
-    console.log(`The todoListCompleted has updated : ${todoListCompleted}`);
-    console.log("The todoListCompleted: ", todoListCompleted)
+    // console.log("todoListCompleted updated from addToComplete: ", todoListCompleted);
 
-}; // adds the todo to todoListCompleted
+    // This section removes the todo from the todoList
+
+      var filteredArray = todoList.filter(function(task){
+            return task !== todo;
+      });
+
+      setTodoList(filteredArray);
+      // console.log("todoList updated from addToComplete: ", todoList)
+   
+    console.log("todoList from addToComplete: ", todoList);
+
+}; // adds the todo to todoListCompleted, deletes the todo from todoList
 
 
     // the STYLES  -------------------------------------------------------------------------
@@ -50,40 +61,34 @@ export default function Todo() {
     color:'royalblue' /*  todoComplete ? 'royalblue' : 'grey',  ---> NEED TO HOOK UP A CONDITIONAL */
   };
 
-  const style2 = {
-    fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: 'dodgerblue' /* NEED TO HOOK THIS UP AS A CONDITIONAL IN RETURN SECTION */
-  };  
-
   useEffect(() => {
-    console.log("do this if the todoList changes"); 
+    console.log("do this if the todoList changes", todoList); 
+
     // I want to add an invocation for a reset function for the placeholder here
   }, [todoList]);
 
   return (
-    <div className='widget-input container'>
+    <div className='widget-todo container'>
       <h2>To Do List</h2>
-      <div id='output' style={style} >{inputValue.toUpperCase()}</div> {/* STEP 3 */}
+      <div id='output' style={style} >{inputValue}</div>
       <div>
             <input id='todo' type='text' placeholder=" enter to do here" value={inputValue} onChange={changeInput} /> 
-            {/* QUESTION:  I want this placeholder to reset back to baseline after the click.  */}
-            <button id='addTodo' onClick={addTodoList}>Add</button> 
+            {/* QUESTION:  I want this placeholder to reset back to baseline after the 
+            click.  */}
+                <button id='addTodo' onClick={addTodoList}>Add</button> 
 
-            {todoList.map(todo => 
-              <div className='todo'>
+            {todoList.map((todo, index) => 
+              <div className='todo' 
+              key={todo + index}>
                 {`${todo}  `} 
-                <button id= 'addToComplete' onClick={addToComplete(todo)} >Complete</button>
+                <button id='addToDoComplete' onClick={() => {addToComplete(todo)}}>Complete</button>
               </div>
               )
+              
             }
-            
       </div>
     </div>
   );
 }
 
-// todoList.map(todo =>
-//   <div className='todo' key={dev.id}>
-//     {inputValue} <button onClick={() => {setFeaturedId(dev.id) /* in here set the featured id to be dev.id */ }}>Feature</button>
-//   </div>
+// {friend.hobbies.map((hobby, index) => <li key={index}>{hobby}</li>)} SAMPLE .map code 
