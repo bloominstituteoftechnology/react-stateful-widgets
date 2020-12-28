@@ -15,7 +15,8 @@ h2 {
   left: 5%;
   transform-origin: center left;
 }
-button, input {
+button,
+input {
   margin: 3px;
   color: #7a6a6a;
   border: 1px solid rgb(210, 210, 210);
@@ -42,7 +43,7 @@ button, input {
 }
 @keyframes rotate {
   to {
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
 }
 .spinner {
@@ -54,7 +55,7 @@ button, input {
 .squares {
   display: grid;
   grid-template-columns: 50px 50px;
-  grid-template-rows: 50px 50px; 
+  grid-template-rows: 50px 50px;
   column-gap: 10px;
   row-gap: 10px;
 
@@ -69,8 +70,34 @@ button, input {
     }
   }
 }
+.ttt {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+  column-gap: 10px;
+  row-gap: 10px;
+
+  .square {
+    justify-self: stretch;
+    border: 2px dashed black;
+    cursor: pointer;
+
+    &.active {
+      background-color: lightgreen;
+      border: 3px solid black;
+    }
+
+    &.computerActive {
+      background-color: pink;
+      border: 3px solid black;
+    }
+  }
+
+
+}
 .programmers {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
+

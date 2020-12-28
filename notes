@@ -1,0 +1,5 @@
+Use this to remove the files and start npm install again.
+
+rm -rf node_modules package-lock.json
+
+
