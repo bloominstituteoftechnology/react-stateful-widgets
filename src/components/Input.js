@@ -1,16 +1,5 @@
 /* COMPLETE
-INPUT Instructions
-
-Watch this short video:
-https://tk-assets.lambdaschool.com/a664dfe7-2dde-48d1-8fa2-48066d98e515_input.gif
-
-How many slices of state do you think are necessary to act as "sources of truth" for all
-the things that change in this widget? Give it some thought before continuing reading!
-
-Yup, a single slice of state is enough! In it we'll keep track of the value of the input.
-Whether the text shows royalblue or crimson can be derived from the length of the value of the input.
-
-STEP 0: COMPLETE
+I
   Study the component below, and import the state hook.
 
 STEP 1: COMPLETE

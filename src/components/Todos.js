@@ -61,11 +61,11 @@ export default function Todo() {
     color:'royalblue' /*  todoComplete ? 'royalblue' : 'grey',  ---> NEED TO HOOK UP A CONDITIONAL */
   };
 
-  useEffect(() => {
-    console.log("do this if the todoList changes", todoList); 
+  // // useEffect(() => {
+  // //   console.log("do this if the todoList changes", todoList); 
 
-    // I want to add an invocation for a reset function for the placeholder here
-  }, [todoList]);
+  //   // I want to add an invocation for a reset function for the placeholder here
+  // }, [todoList]);
 
   return (
     <div className='widget-todo container'>

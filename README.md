@@ -49,7 +49,7 @@ This project includes a `src/components` folder containing several React compone
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-#### Stretch Goal 1 (To-Do List)
+#### Stretch Goal 1 (To-Do List) COMPLETE
 
 Create a `Todos.js` file inside `src/components`. Find a tutorial online on how to build a to-do list in React using component state (no Redux!), and implement it. We should be able to render a list of to-dos, and cross out (or remove) individual to-dos to mark them complete.
 
@@ -57,12 +57,12 @@ Create a `Todos.js` file inside `src/components`. Find a tutorial online on how 
 
 Build another component inside this project with a game of Tic Tac Toe. The positions of the 'Xs' and the 'Os' over time need to be maintained in a slice of state, so that the JSX may display the contents of the 3 x 3 grid accurately. Only empty squares may be selected by the human player, and the event handler that deals with these clicks will have to include quite a bit of logic:
 
-  1. Does the latest move by the human player mean **the game is over**? (Game over, then!)
-  2. Is the game **immediately winnable by the computer** by making a certain move? (Make that move!)
-  3. Can the computer **block the human from winning on their next move** by making certain move? (Prevent defeat!)
-  
+1. Does the latest move by the human player mean **the game is over**? (Game over, then!)
+2. Is the game **immediately winnable by the computer** by making a certain move? (Make that move!)
+3. Can the computer **block the human from winning on their next move** by making certain move? (Prevent defeat!)
+
 The move by the computer should probably be random if the previous checks turn out negative, but you'll be surprised at how smart the "game engine" will feel.
 
 ## Submission Format
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+- [x] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**
