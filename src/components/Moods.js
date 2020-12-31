@@ -53,8 +53,7 @@ const [mood, setMood] = useState(initialMood)
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'crimson', /* STEP 2 */
-    {mood === happyMood ? 'royalblue' : 'crimson'}
+    color: (mood === happyMood)? 'royalblue' : 'crimson' /* STEP 2 */
   };
 
   return (
