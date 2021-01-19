@@ -10,7 +10,7 @@ This project allows you to practice the concepts and techniques learned in this 
 
 Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any number of reasons.
 
-### Description
+### Description--------------------------------------------
 
 This project includes a `src/components` folder containing several React components. In their current form these components are stateless and display hard-coded information only. You will make the app interactive by going into each component, adding state and implementing event handlers and helper functions to allow the users of the app to update state by interacting with the page.
 
