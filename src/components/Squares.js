@@ -52,12 +52,12 @@ export default function Squares() {
           // Nasty bug! We should map over a slice of state, instead of 'listOfSquareIds'.
           // We might say: "it works, though!" But if the list of squares is not state,
           // we could never add squares, change squares or remove squares in the future. Fix!
-          squares.map(id =>
+          squares.map(sqId =>
             <div
-              id={id}
-              key={id}
-              className={`square${getClassName(id)}`}
-              onClick={() => markActive(id)}
+              id={sqId}
+              key={sqId}
+              className={`square${getClassName(sqId)}`}
+              onClick={() => markActive(sqId)}
             >
             </div>
           )
