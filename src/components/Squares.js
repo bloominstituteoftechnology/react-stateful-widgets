@@ -33,7 +33,7 @@ export default function Squares() {
     // as the argument matches the active square in state, empty string otherwise.
     // Right-click and "inspect element" on the square to see its effect.
     
-    return id === square ?' active' : ''
+    return id === square ? ' active' : ''
   };
 
   const markActive = id => {
