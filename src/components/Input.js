@@ -45,9 +45,12 @@ export default function Input() {
     const { value } = evt.target;
 
     /* STEP 4 */
+    setInputValue(value)
   };
   const reset = () => {
     /* STEP 5 */
+    setInputValue('')
+
   };
 
   const style = {
@@ -61,7 +64,7 @@ export default function Input() {
       <h2>Input</h2>
       <div id='output' style={style}>{inputValue.toUpperCase()}</div> 
       <div>
-        <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
+        <input id='input' type='text' onChange={changeInput} value={inputValue} /> {/* STEP 6 */}
         <button id='resetInput' onClick={reset}>Reset</button>
       </div>
     </div>
