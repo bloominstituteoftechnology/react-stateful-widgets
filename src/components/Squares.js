@@ -14,6 +14,7 @@ Only one square (or none) can be active at any given point.
 Find comments below to help you along.
 */
 
+
 import React from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
