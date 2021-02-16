@@ -6,7 +6,7 @@ https://tk-assets.lambdaschool.com/59036a85-0980-42c8-81ad-9afc8354497f_counter-
 
 How many slices of state do you think are necessary to act as "sources of truth" for all
 the things that change in this widget? Give it some thought before continuing reading!
-
+  
 A naive developer might say 3 different slices:
   - The count
   - Whether the text is color crimson or royalblue
