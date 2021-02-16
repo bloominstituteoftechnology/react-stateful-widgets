@@ -20,6 +20,9 @@ import React, {useState} from 'react';
 const listOfSquareIds = ['sqA', 'sqB', 'sqC', 'sqD'];
 
 export default function Squares() {
+
+  const [squares, setSquare] = useState(listOfSquareIds)
+  const [activeSquare, setActiveSquare] = useState(null)
   // Use the state hook twice, as we need two slices of state: 'squares' and
   // 'activeSquare'. One holds the _array_ of square ids, and the other keeps track
   // of the currently active square. On page load there's no active square,
@@ -30,7 +33,8 @@ export default function Squares() {
     // It should return a string containing the class name of 'active', if the id passed
     // as the argument matches the active square in state, empty string otherwise.
     // Right-click and "inspect element" on the square to see its effect.
-    return ''
+    
+    return (id === activeSquare ? 'active': '')
   };
 
   const markActive = id => {
@@ -38,6 +42,7 @@ export default function Squares() {
     // Set the id argument to become the active id in state
     // (unless it already is, in which case we should reset
     // the currently active square id back to initial state).
+    
   };
 
   return (
