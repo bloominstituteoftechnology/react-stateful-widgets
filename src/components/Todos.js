@@ -1,18 +1,11 @@
 import React from 'react'
+import { removeItem, replaceItem } from '../utils'
 
 const createNewTodo = text => ({
     id: new Date().toString(),
     text,
     completed: false
 })
-
-const removeItem = (items, idx) => {
-    return [...items.slice(0, idx), ...items.slice(idx + 1)]
-}
-
-const replaceItem = (items, idx, item) => {
-    return [...items.slice(0, idx), item, ...items.slice(idx + 1)]
-}
 
 export default function Todos() {
     const [inputValue, setInputValue] = React.useState('')
