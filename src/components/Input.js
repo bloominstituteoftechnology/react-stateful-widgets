@@ -34,9 +34,10 @@ STEP 6:
   We need to add an extra prop to the <input /> element like so: value={inputValue}
 */
 
-import React from 'react'; /* STEP 0 */
+import React from 'react';
+import ReactDOM from 'react-dom'; /* STEP 0 */
 
-export default function Input() {
+function Input() {
   /* STEP 1 */
 
   const changeInput = evt => {
@@ -67,3 +68,8 @@ export default function Input() {
     </div>
   );
 }
+
+
+ReactDOM.render
+
+export default Input;
