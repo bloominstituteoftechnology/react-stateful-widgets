@@ -53,7 +53,7 @@ import ReactDOM from 'react-dom';
 const Counter = () => {
   /* STEP 1 */
   const [count, setCounter] = React.useState(0)
-  
+
   const increment = () => {
     getElementById('#increment').addEventListener(setCounter(count + 1))
   };
@@ -69,10 +69,10 @@ const Counter = () => {
     marginBottom: '0.3em',
     function() {
       if( count % 2 === 0) {
-        style.color = 'royal blue'
+        getElementById('#count').addAttribute( style.color = 'royal blue')
       }
       else {
-        style.color = 'red'
+        getElementById('#count').addAttribute( style.color = 'red' )
       }
     }
   }/* STEP 2 */
