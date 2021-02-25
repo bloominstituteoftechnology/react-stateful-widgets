@@ -28,7 +28,7 @@ STEP 2:
   If count is even, then "royalblue", else "crimson".
 
 STEP 3:
-  We need to replace some hard-coded info in the JSX with expressions, interpolated inside curly brackets.
+  We need to replace some hard-coded info in the JSX with expressions interpolated inside curly brackets.
   Start by replacing the character "0" with {count}. The 'count' slice of state is the source of truth here.
   Then, replace the word "even" with a ternary: {if count is even number, then string "even", else string "odd"}.
 
@@ -46,32 +46,42 @@ STEP 6:
   This click handler needs to use 'setCount' to set the 'count' to be zero again.
 */
 
-import React from 'react'; /* STEP 0 */
+//import React from 'react'; /* STEP 0 */
+import React, {useState} from 'react';
+
 
 export default function Counter() {
   /* STEP 1 */
+  const [count, setCount] = useState(0);
+  
 
   const increment = () => {
     /* STEP 4 */
+    setCount(count + 1);
+
   };
   const decrement = () => {
     /* STEP 5 */
+    setCount(count - 1)
   };
   const reset = () => {
     /* STEP 6 */
+    setCount(0);
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    color: count%2 === 0 ? 'royalBlue': 'crimson', /* STEP 2 */
   };
+
+  
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number 0 is even {/* STEP 3 */}
+        Number {count} is {count%2 === 0 ? 'even' : 'odd' } {/* STEP 3 */}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
