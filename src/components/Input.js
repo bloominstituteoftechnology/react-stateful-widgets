@@ -48,7 +48,7 @@ const [inputValue, setInputValue] = useState('')
   };
   const reset = () => {
     /* STEP 5 */
-    inputValue('')
+    setInputValue('')
   };
   const style = {
     fontSize: '1.5em',

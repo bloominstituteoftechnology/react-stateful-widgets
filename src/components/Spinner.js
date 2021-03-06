@@ -50,10 +50,10 @@ export default function Spinner() {
     <div className='widget-spinner container'>
       <h2>Spinner</h2>
       {
-        {spinnerOn} && <div id='spinner' className='spinner'>--+--</div> /* STEP 2 */
+        spinnerOn && <div id='spinner' className='spinner'>--+--</div> /* STEP 2 */
       }
       <button id='toggleSpinner' onClick={toggleSpinner}>
-      {spinnerOn == 'true'? "spinnerOn" : "spinneroff"} {/* STEP 3 */}
+      {spinnerOn ? "hide spinner": "show spinner" } {/* STEP 3 */}
       </button>
     </div>
   );
