@@ -1,68 +1,68 @@
 /*
-INPUT Instructions
-
+PROGRAMMERS Instructions
 Watch this short video:
-https://tk-assets.lambdaschool.com/a664dfe7-2dde-48d1-8fa2-48066d98e515_input.gif
-
-How many slices of state do you think are necessary to act as "sources of truth" for all
-the things that change in this widget? Give it some thought before continuing reading!
-
-Yup, a single slice of state is enough! In it we'll keep track of the value of the input.
-Whether the text shows royalblue or crimson can be derived from the length of the value of the input.
-
-STEP 0:
-  Study the component below, and import the state hook.
-
-STEP 1:
-  Create a slice of state called 'inputValue' and its 'setInputValue' buddy.
-  We should initialize this state to the empty string.
-
-STEP 2:
-  Make the color of the text be crimson if the length of 'inputValue' goes over ten.
-
-STEP 3:
-  Interpolate the value of the input inside this <div />. How can we make it show in ALL CAPS?
-
-STEP 4:
-  Set the value of the input -found inside the event object- into state.
-
-STEP 5:
-  Set the input value in state to be empty string. The reset still won't work, though! See the next step.
-
-STEP 6:
-  For the input to reset correctly, it needs to "drink" its value from state!
-  We need to add an extra prop to the <input /> element like so: value={inputValue}
+https://tk-assets.lambdaschool.com/1ea6e6a2-2ef1-45de-bcab-b99a8f775870_programmers.gif
+This component keeps track of a list of pioneers in the field of programming on the one hand,
+and the id of the currently featured programmer on the other. That's two slices of state!
+We can only feature one awesome programmer at a time.
+Find comments below to help you along.
 */
 
-import React from 'react'; /* STEP 0 */
+import React, {useState} from 'react';
 
-export default function Input() {
-  /* STEP 1 */
+// Use this variable ONLY to initialize a slice of state!
+// There is something in the JSX right now breaking this rule...
+export const listOfAwesome = [
+  { id: '1', name: 'Ada Lovelace' },
+  { id: '2', name: 'Grace Hopper' },
+  { id: '3', name: 'Evelyn Boyd Granville' },
+  { id: '4', name: 'Mary Kenneth Keller' },
+  { id: '5', name: 'Frances Allen' },
+  { id: '6', name: 'Carol Shaw' },
+];
 
-  const changeInput = evt => {
-    // When the input changes, its whole value can be found inside the event object.
-    // Log out the synthetic event object 'evt' and see for yourself.
-    const { value } = evt.target;
+export default function Programmers() {
+  // We'll have to use the state hook twice, as we need two slices of state.
+  // The programmers list on the one hand, and the id of the featured programmer on the other.
 
-    /* STEP 4 */
-  };
-  const reset = () => {
-    /* STEP 5 */
+  const getNameOfFeatured = () => {
+    // Leave this for last!
+    // This is NOT an event handler but a helper function. See its usage inside the JSX.
+    // It's going to utilize both slices of state to return the _name_ of the featured dev.
+    // The beauty of closures is that we can "see" both slices of state from this region
+    // of the program, without needing to inject the information through arguments.
   };
 
   const style = {
     fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    marginTop: '0.5em',
+    color: 'royalblue', // 🤔 color turns to gold, when celebrating
   };
 
   return (
-    <div className='widget-input container'>
-      <h2>Input</h2>
-      <div id='output' style={style}></div> {/* STEP 3 */}
-      <div>
-        <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
-        <button id='resetInput' onClick={reset}>Reset</button>
+    <div className='widget-programmers container'>
+      <h2>Programmers</h2>
+      <div className='programmers'>
+        {
+          /* Nasty bug! We should map over a slice of state, instead of 'listOfAwesome'.
+          We might think: "it works, though!" But if the list of programmers is not state,
+          we could never add or edit programmers in the future. The list would be a static thing." */
+          listOfAwesome.map(dev =>
+            <div className='programmer' key={dev.id}>
+              {dev.name} <button onClick={() => { /* in here set the featured id to be dev.id */ }}>Feature</button>
+            </div>
+          )
+        }
+      </div>
+      <div id='featured' style={style}>
+        {
+          // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
+          // Pseudo-code: if the currently featured id is truthy render text 1, otherwise render text 2.
+          // Replace the hard-coded false with the correct variable.
+          false
+            ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳`
+            : 'Pick an awesome programmer'
+        }
       </div>
     </div>
   );
