@@ -74,7 +74,7 @@ export default function Counter() {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color:{count===even ? <div> royalblue </div> : <div> crimson </div>},
+    color:{countEven ? <div> royalblue </div> : <div> crimson </div>},
    /* STEP 2 */
   };
 
