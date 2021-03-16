@@ -58,17 +58,17 @@ export default function Moods() {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: mood == happyMood ? 'red' :'indigo', /* STEP 2 */
+    color: mood == happyMood ? 'Indigo' :'green', /* STEP 2 */
   };
 
   return (
     <div className='widget-moods container'>
       <h2>Moods</h2>
-      <div id='mood' style={style}>Not sure how I feel</div> {/* STEP 3 */}
+      <div id='mood' style={style}>I hate Green but like Indigo.</div> {/* STEP 3 */}
       <div>
         <button id='makeHappy' onClick={makeHappy}>Make Happy</button>
         <button id='makeSad' onClick={makeSad}>Make Sad</button>
-        <button id='resetMood' onClick={reset}>Reset</button>
+        <button id='resetMood' onClick={reset}>Reset</button> 
       </div>
     </div>
   );
