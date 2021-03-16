@@ -32,7 +32,7 @@ const [activeSquare, setActiveSquare] = useState(null)
     // It should return a string containing the class name of 'active', if the id passed
     // as the argument matches the active square in state, empty string otherwise.
     // Right-click and "inspect element" on the square to see its effect.
-    return id == activeSquare ? '' + id : ''
+    return `${activeSquare === id ? ' active' : ''}`
   };
 
   const markActive = id => {
@@ -40,7 +40,7 @@ const [activeSquare, setActiveSquare] = useState(null)
     // Set the id argument to become the active id in state
     // (unless it already is, in which case we should reset
     // the currently active square id back to initial state).
-    id != activeSquare ? setActiveSquare(id) : setActiveSquare(null)
+    id === activeSquare ? setActiveSquare(null) : setActiveSquare(id)
   };
 
   return (
