@@ -1,7 +1,7 @@
 /*
 COUNTER Instructions
 
-Watch this short video carefully, paying attention to the UI and Chrome Devtools:
+Watch this snhort video carefully, paying attention to the UI and Chrome Devtools:
 https://tk-assets.lambdaschool.com/59036a85-0980-42c8-81ad-9afc8354497f_counter-clip.gif
 
 How many slices of state do you think are necessary to act as "sources of truth" for all
