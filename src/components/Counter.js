@@ -69,7 +69,7 @@ const [count, setCount] = useState(0)
    };
 
   const reset = () => {
-     setCount = 0
+     setCount( count === 0) 
     
     /* STEP 6 */
   };
