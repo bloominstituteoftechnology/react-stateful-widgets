@@ -36,7 +36,6 @@ STEP 4:
   This click handler needs to toggle the spinner by setting "whether on" to be the opposite of what it currently is.
   Do you remember the operator we use to do "not"?
 */
-
 import React, {useState} from 'react';
 
 export default function Spinner() {

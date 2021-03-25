@@ -37,7 +37,6 @@ export default function Programmers() {
     // of the program, without needing to inject the information through arguments.
     return featureId
   };
-
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',

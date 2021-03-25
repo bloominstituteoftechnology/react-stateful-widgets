@@ -27,7 +27,6 @@ STEP 3:
 STEPS 4, 5, 6:
   Inside these click handlers set the correct mood, using 'setMood' and the variables below the imports.
 */
-
 import React, {useState} from 'react';
 
 const initialMood = 'Not sure how I feel';
@@ -46,13 +45,11 @@ export default function Moods() {
   const reset = () => {
     setMood(initialMood)
   };
-
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
     color: mood === happyMood ? 'royalblue' : 'crimson'
   };
-
   return (
     <div className='widget-moods container'>
       <h2>Moods</h2>
