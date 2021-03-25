@@ -48,28 +48,28 @@ STEP 6:
 
 // import React from 'react'; /* STEP 0 */
 
-import React, { useState } from 'react';
+//import React, { useState } from 'react';
 
 
 export default function Counter() {
-const [count, setCount] = useState(0)
+//const [count, setCount] = useState(0)
 
 
 
 
    const increment = () => {
-    setCount(count + 1)
+   // setCount(count + 1)
   
    };
 
   const decrement = () => {
-    setCount(count - 1)
+   // setCount(count - 1)
   
   //   /* STEP 5 */
    };
 
   const reset = () => {
-     setCount( count === 0) 
+    // setCount( count === 0) 
     
     /* STEP 6 */
   };
@@ -78,7 +78,7 @@ const [count, setCount] = useState(0)
     fontSize: '1.5em',
     marginBottom: '0.3em',
     color: 'royalblue', /* STEP 2 */
-    color: count % 2 === 0 ? "crimson" : 'royalblue'
+   // color: count % 2 === 0 ? "crimson" : 'royalblue'
   };
 
   return (
@@ -86,7 +86,7 @@ const [count, setCount] = useState(0)
       <h2>Counter</h2>
       <div id='count' style={style}>
         Number 0 is even - {/* STEP 3 */}
-        Number {count} is {(count % 2 === 0 ? <div> 'even' </div> : <div> 'odd'</div> )} 
+        {/* Number {count} is {(count % 2 === 0 ? <div> 'even' </div> : <div> 'odd'</div> )}  */}
 
       </div>
       <div>

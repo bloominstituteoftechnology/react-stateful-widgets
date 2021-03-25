@@ -34,38 +34,38 @@ STEP 6:
   We need to add an extra prop to the <input /> element like so: value={inputValue}
 */
 
-import React, {useState} from 'react'; /* STEP 0 */
+//import React, {useState} from 'react'; /* STEP 0 */
 
 export default function Input() {
-  const [inputValue, setInputValue] = useState(' ')
+  //const [inputValue, setInputValue] = useState(' ')
   /* STEP 1 */
 
   const changeInput = evt => {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
-    const { value } = evt.target;
+  //  const { value } = evt.target;
 
 
     /* STEP 4 */
-    setInputValue(value)
+    //setInputValue(value)
   };
-  const reset = () => {
+ const reset = () => {
     /* STEP 5 */
-    setInputValue(' ')
+  //  setInputValue(' ')
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
     color: 'royalblue', /* STEP 2 */
-    color: (inputValue.length > 10) ? 'crimson' : 'royalblue',
+   // color: (inputValue.length > 10) ? 'crimson' : 'royalblue',
   };
 
   return (
     <div className='widget-input container'>
       <h2>Input</h2>
       <div id='output' style={style}></div> {/* STEP 3 */}
-      <div> id='output' style={style}>{inputValue.toUpperCase()}</div>
+      {/* <div> id='output' style={style}>{inputValue.toUpperCase()}</div> */}
       <div>
         <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
         <input id='input' type='text' onChange={changeInput} value={inputValue} />
@@ -73,4 +73,5 @@ export default function Input() {
       </div>
     </div>
   );
-}
+
+  }
