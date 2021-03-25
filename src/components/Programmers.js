@@ -30,7 +30,7 @@ export default function Programmers() {
   const [ programmersList, setProgrammersList ] = useState( listOfAwesome )
   const [ featuredProgrammer, setFeaturedProgrammer ] = useState( null )
 
-  const getNameOfFeatured = () => programmersList[ featuredProgrammer ].name
+  const getNameOfFeatured = () => programmersList[ featuredProgrammer - 1 ].name
 
     // Leave this for last! ^^^^^^^^^^^^^^^^^^^^^^^
     // This is NOT an event handler but a helper function. See its usage inside the JSX.
