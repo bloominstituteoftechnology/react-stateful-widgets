@@ -37,7 +37,7 @@ STEP 6:
 import React, {useState} from 'react'; /* STEP 0 */
 
 export default function Input() {
-  const [inputValue, setInputValue] = useState(' ')
+  const [inputValue, setInputValue] = useState('')
   /* STEP 1 */
 
   const changeInput = evt => {
@@ -51,14 +51,21 @@ export default function Input() {
   };
  const reset = () => {
     /* STEP 5 */
-   setInputValue(' ')
+   setInputValue('')
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
     color: 'royalblue', /* STEP 2 */
-    color: (inputValue.length > 10) ? 'crimson' : 'royalblue',
+    // color: (inputValue.length > 10) ? 'crimson' : 'royalblue',
+  };
+
+  const style2 = {
+    fontSize: '1.5em',
+    marginBottom: '0.3em',
+    color: 'crimson', /* STEP 2 */
+    // color: (inputValue.length > 10) ? 'crimson' : 'royalblue',
   };
 
   return (
