@@ -28,14 +28,19 @@ STEPS 4, 5, 6:
   Inside these click handlers set the correct mood, using 'setMood' and the variables below the imports.
 */
 
-import React from 'react'; /* STEP 0 */
+import React ,{useState} from 'react'; /* STEP 0 */ 
 
 const initialMood = 'Not sure how I feel';
 const happyMood = 'Quite happy!';
 const sadMood = 'Rather sad';
 
 export default function Moods() {
-  /* STEP 1 */
+
+
+  const [mood, setMood] = useState
+  
+  /* initialized to one of the three variables right below our imports.
+  Those variables exist so we don't need to write those long strings anywhere inside the component.*/
 
   const makeHappy = () => {
     /* STEP 4 */
@@ -50,7 +55,8 @@ export default function Moods() {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'crimson', /* STEP 2 */
+    color: 'crimson', inputValue < 10 ? "royalBlue" :
+    "crimson",
   };
 
   return (
