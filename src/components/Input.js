@@ -34,9 +34,10 @@ STEP 6:
   We need to add an extra prop to the <input /> element like so: value={inputValue}
 */
 
-import React from 'react'; /* STEP 0 */
+import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Input() {
+  const {inputValue, setInputValue} = useState('');
   /* STEP 1 */
 
   const changeInput = evt => {
@@ -47,19 +48,19 @@ export default function Input() {
     /* STEP 4 */
   };
   const reset = () => {
-    /* STEP 5 */
+    /* STEP 5   */
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    // color: inputvalue > 10 ? 'crimson' : 'royalblue', /* STEP 2 */
   };
 
   return (
     <div className='widget-input container'>
       <h2>Input</h2>
-      <div id='output' style={style}></div> {/* STEP 3 */}
+      <div id='output' style={style}></div> {inputvalue.toUpperCase('')}
       <div>
         <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
         <button id='resetInput' onClick={reset}>Reset</button>
