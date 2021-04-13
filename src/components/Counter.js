@@ -49,29 +49,37 @@ STEP 6:
 import React from 'react'; /* STEP 0 */
 
 export default function Counter() {
-  /* STEP 1 */
+
+  const [count, setCount] = React.useState(0);
 
   const increment = () => {
-    /* STEP 4 */
+    setCount(count + 1);
   };
   const decrement = () => {
-    /* STEP 5 */
+    setCount(count - 1);
   };
   const reset = () => {
-    /* STEP 6 */
+    setCount(0);
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    color: 'royalblue',
   };
+
+  if (count & 1) {
+    style.color = 'crimson';
+  }
+  else {
+    style.color = 'royalblue';
+  }
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number 0 is even {/* STEP 3 */}
+        Number {count} is {count & 1 ? 'odd' : 'even'}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
