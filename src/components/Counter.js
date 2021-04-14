@@ -54,13 +54,13 @@ export default function Counter() {
   const [count, setCount] = useState(1)
 
   const increment = () => {
-    /* STEP 4 */
+    setCount(count + 1)
   };
   const decrement = () => {
-    /* STEP 5 */
+    setCount(count - 1)
   };
   const reset = () => {
-    /* STEP 6 */
+    setCount(0)
   };
 
   const style = {
