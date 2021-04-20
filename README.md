@@ -18,9 +18,9 @@ This project includes a `src/components` folder containing several React compone
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN fork of the repository using your terminal.
-- [ ] CD into the project base directory.
+- [x] Create a forked copy of this project.
+- [x] Clone your OWN fork of the repository using your terminal.
+- [x] CD into the project base directory.
 - [ ] Download project dependencies by running `npm install`.
 - [ ] Start up the app using `npm start`.
 - [ ] Optionally run tests using `npm test`. (The app must be running on `http://localhost:1234`)
