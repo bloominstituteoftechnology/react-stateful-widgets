@@ -46,32 +46,57 @@ STEP 6:
   This click handler needs to use 'setCount' to set the 'count' to be zero again.
 */
 
-import React from 'react'; /* STEP 0 */
+import React, {useState} from 'react'; /* STEP 0 */
 
 export default function Counter() {
-  /* STEP 1 */
+  /* STEP 1: Using the state hook, create a 'count', 'setCount' pair.
+  The 'count' state should be initialized to the number zero. */
+
+  const [count, setCount] = useState(0)
 
   const increment = () => {
     /* STEP 4 */
+
+    setCount (count + 1) 
+
+
   };
   const decrement = () => {
+    
+    setCount (count -1)
     /* STEP 5 */
   };
   const reset = () => {
+    
+    
+    setCount(0)
     /* STEP 6 */
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    color: count % 2 === 0 ? 'royalblue' : 'crimson'
+    
+    // the '%' will return the remander of count divided by 2, if even number will be no remiander aka royalblue if remainder will be odd number and crimson 
+    
+    
+    /* STEP 2: using a ternaryoperator
+    ex: function getFree (isMember) {
+      return (
+        isMember ? '$2.00' : '$10.00'
+
+      )
+
+    }
+    */
   };
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number 0 is even {/* STEP 3 */}
+        Number {count} is {count % 2 === 0 ? 'even' : 'odd'}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
