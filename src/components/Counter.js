@@ -63,17 +63,19 @@ export default function Counter() {
     /* STEP 6 */
   };
 
+
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    color: (count ? 'royalBlue' : 'crimson' )/* STEP 2 */ 
   };
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number 0 is even {/* STEP 3 */}
+      {/* Then, replace the word "even" with a ternary: {if count is even number, then string "even", else string "odd"}. */}
+        Number {count} is  {count ? "even" : "odd"}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
