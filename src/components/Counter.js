@@ -49,7 +49,7 @@ STEP 6:
 import React from 'react'; /* STEP 0 */
 
 export default function Counter() {
-  /* STEP 1 */
+  
 
   const increment = () => {
     /* STEP 4 */
