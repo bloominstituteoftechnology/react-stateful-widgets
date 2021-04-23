@@ -29,35 +29,35 @@ STEPS 4, 5, 6:
 */
 
 import React from 'react'; import {useState} from 'react'
-const [mood,setMood] = useState(happy)
+
 
 const initialMood = 'Not sure how I feel';
 const happyMood = 'Quite happy!';
 const sadMood = 'Rather sad';
 
 export default function Moods() {
-  /* STEP 1 */
+  const [mood, setMood] = useState(initialMood)
 
   const makeHappy = () => {
-    /* STEP 4 */
+    setMood(happyMood)
   };
   const makeSad = () => {
-    /* STEP 5 */
+    setMood(sadMood)
   };
   const reset = () => {
-    /* STEP 6 */
+    setMood(initialMood)
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: `${mood == 'happy' ? 'royalblue': 'crimson'}`
+    color: `${mood == happyMood ? 'royalblue': 'crimson'}`
   };
 
   return (
     <div className='widget-moods container'>
       <h2>Moods</h2>
-      <div id='mood' style={style}>Not sure how I feel</div> {/* STEP 3 */}
+      <div id='mood' style={style}>{mood}</div> 
       <div>
         <button id='makeHappy' onClick={makeHappy}>Make Happy</button>
         <button id='makeSad' onClick={makeSad}>Make Sad</button>
