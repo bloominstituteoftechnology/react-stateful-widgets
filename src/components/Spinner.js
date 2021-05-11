@@ -13,7 +13,7 @@ Our first impulse might be to say 2 different states:
 
 But a single slice of state is all that's needed here: whether spinner is on or not.
 The text of the button can be derived from the value of that one slice of state.
-
+   
 STEP 0:
   Start by studying the component below, and importing the state hook.
 
@@ -58,3 +58,52 @@ export default function Spinner() {
     </div>
   );
 }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
