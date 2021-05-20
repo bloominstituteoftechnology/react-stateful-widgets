@@ -7,6 +7,7 @@ import Moods from './components/Moods';
 import Spinner from './components/Spinner';
 import Squares from './components/Squares';
 import Programmers from './components/Programmers';
+import Todo from './components/Todo';
 
 render(
   <>
@@ -16,6 +17,7 @@ render(
     <Input />
     <Squares />
     <Programmers />
+    <Todo />
   </>
   ,
   document.querySelector('#root')
