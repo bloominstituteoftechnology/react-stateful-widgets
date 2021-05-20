@@ -1,13 +1,10 @@
 /*
 PROGRAMMERS Instructions
-
 Watch this short video:
 https://tk-assets.lambdaschool.com/1ea6e6a2-2ef1-45de-bcab-b99a8f775870_programmers.gif
-
 This component keeps track of a list of pioneers in the field of programming on the one hand,
 and the id of the currently featured programmer on the other. That's two slices of state!
 We can only feature one awesome programmer at a time.
-
 Find comments below to help you along.
 */
 
@@ -37,7 +34,7 @@ export default function Programmers() {
     // It's going to utilize both slices of state to return the _name_ of the featured dev.
     // The beauty of closures is that we can "see" both slices of state from this region
     // of the program, without needing to inject the information through arguments.
-    return featuredProgrammer ? featuredProgrammer.name : null
+    return (featuredProgrammer ? featuredProgrammer.name : null)
   };
 
   const style = {
@@ -56,7 +53,7 @@ export default function Programmers() {
           we could never add or edit programmers in the future. The list would be a static thing." */
           programmers.map(dev =>
             <div className='programmer' key={dev.id}>
-              {dev.name}{" "} <button onClick={() => {featuredProgrammer(dev.id) /* in here set the featured id to be dev.id */ }}>Feature</button>
+              {dev.name}{" "} <button onClick={() => {featuredProgrammer(dev.id)}}>Feature</button>
             </div>
           )
         }
