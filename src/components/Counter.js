@@ -15,14 +15,14 @@ A naive developer might say 3 different slices:
 But a single slice of state is all that's needed here: the count!
 The other things can simply be _derived_ from the count itself.
 
-STEP 0:
+done STEP 0:
   Start by studying the component below, and importing the state hook.
 
-STEP 1:
+done STEP 1:
   Using the state hook, create a 'count', 'setCount' pair.
-  The 'count' state should be initialized to the number zero.
+  The 'count' state should be initialized to the number zero.                  // useState(0)
 
-STEP 2:
+done - had to cheat, lambda never taught me this STEP 2:
   The 'style' object has the 'color' property hard-coded to "royalblue".
   What the value of 'color' should be instead is a ternary expression that goes like this:
   If count is even, then "royalblue", else "crimson".
@@ -46,33 +46,35 @@ STEP 6:
   This click handler needs to use 'setCount' to set the 'count' to be zero again.
 */
 
-import React from 'react'; /* STEP 0 */
+import React, { useState } from 'react'; 
 
 export default function Counter() {
-  /* STEP 1 */
+  const [count, setCount] = useState(0)
+
 
   const increment = () => {
-    /* STEP 4 */
+    setCount(count + 1)
   };
   const decrement = () => {
-    /* STEP 5 */
+    setCount(count - 1)
   };
   const reset = () => {
-    /* STEP 6 */
+    setCount(0)
   };
 
   const style = {
     fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    marginBottom: '0.3em',  
+    color: ((count % 2 == 0) ? "royalblue" : "crimson"),  
   };
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
-      <div id='count' style={style}>
-        Number 0 is even {/* STEP 3 */}
+      <div id='count' style={style}> 
+        Number {count} is {(count % 2 == 0 ? "even" : "odd")}     
       </div>
+
       <div>
         <button id='increment' onClick={increment}>Increment</button>
         <button id='decrement' onClick={decrement}>Decrement</button>
