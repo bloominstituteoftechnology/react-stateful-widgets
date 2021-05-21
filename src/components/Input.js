@@ -24,7 +24,7 @@ STEP 3:
   Interpolate the value of the input inside this <div />. How can we make it show in ALL CAPS?
 
 STEP 4:
-  Set the value of the input -found inside the event object- into state.
+  Set the value of the input found inside the event object into state.
 
 STEP 5:
   Set the input value in state to be empty string. The reset still won't work, though! See the next step.
@@ -34,34 +34,38 @@ STEP 6:
   We need to add an extra prop to the <input /> element like so: value={inputValue}
 */
 
-import React from 'react'; /* STEP 0 */
+import React, { useState } from 'react'; 
 
-export default function Input() {
-  /* STEP 1 */
+export default function Input() {            // Why is export default up here?
+                                              
+  const [inputValue, setInputValue] = useState('')
 
-  const changeInput = evt => {
+  const changeInput = e => {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
-    const { value } = evt.target;
+    const { value } = e.target;
 
     /* STEP 4 */
+    setInputValue(value)
+
+
   };
   const reset = () => {
-    /* STEP 5 */
+    setInputValue('')
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    color: inputValue.length > 10 ? 'crimson' : 'blue'
   };
 
   return (
     <div className='widget-input container'>
       <h2>Input</h2>
-      <div id='output' style={style}></div> {/* STEP 3 */}
+      <div id='output' style={style}> {inputValue.toUpperCase()} </div>   
       <div>
-        <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
+        <input id='input' type='text' onChange={changeInput} value={inputValue}/>            {/* STEP 6 */}
         <button id='resetInput' onClick={reset}>Reset</button>
       </div>
     </div>
