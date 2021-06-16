@@ -1,3 +1,5 @@
+
+
 /*
 COUNTER Instructions
 
@@ -46,7 +48,7 @@ STEP 6:
   This click handler needs to use 'setCount' to set the 'count' to be zero again.
 */
 
-import React from 'react'; /* STEP 0 */
+import React,{ useState } from 'react'; /* STEP 0 */
 
 export default function Counter() {
   /* STEP 1 */
