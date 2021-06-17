@@ -34,7 +34,7 @@ import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Moods() {
   /* STEP 1 */
-  const [mood, setMood] = useState()
+  const [mood, setMood] = useState(initialMood)
 
 const initialMood = 'Not sure how I feel';
 const happyMood = 'Quite happy!';
@@ -43,21 +43,21 @@ const sadMood = 'Rather sad';
 
   const makeHappy = () => {
     /* STEP 4 */
-    mood = setMood(happyMood)
+    setMood(happyMood)
   };
   const makeSad = () => {
     /* STEP 5 */
-    mood = setMood(sadMood)
+    setMood(sadMood)
   };
   const reset = () => {
     /* STEP 6 */
-    mood = setMood(initialMood)
+    setMood(initialMood)
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: (mood == happyMood ? 'royalblue' : 'crimson'), /* STEP 2 */
+    color: (mood === happyMood ? 'royalblue' : 'crimson'), /* STEP 2 */
   };
 
   return (
