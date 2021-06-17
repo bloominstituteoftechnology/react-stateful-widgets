@@ -16,6 +16,8 @@ render(
     <Input />
     <Squares />
     <Programmers />
+
+    Starting it up
   </>
   ,
   document.querySelector('#root')
