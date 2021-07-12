@@ -26,10 +26,10 @@ Whether the text shows royalblue or crimson can be derived from the length of th
 ---STEP 4:
   Set the value of the input -found inside the event object- into state.
 
-STEP 5:
+-STEP 5:
   Set the input value in state to be empty string. The reset still won't work, though! See the next step.
 
-STEP 6:
+-STEP 6:
   For the input to reset correctly, it needs to "drink" its value from state!
   We need to add an extra prop to the <input /> element like so: value={inputValue}
 */
@@ -40,12 +40,14 @@ STEP 6:
 //Import React from library react, extends jsx code functionality to the project
 import React from "react";
 
+
+
 /* STEP 1 */
 //Define the Input function
 export default function Input() 
 {
   //Destructure
-  //Create a slice of state called 'inputValue' and init to empty string " "
+  //Declare state variable, input value" "
   const {inputValue, setInputValue } = useState(" ");
 
   /* STEP 4 */
@@ -91,8 +93,8 @@ export default function Input()
 
       <div>
         {/* STEP 6 
-          * */}
-        <input id = "input" type = "text" onChange = {changeInput} /> 
+          * Add value = {inputValue} tag*/}
+        <input id = "input" type = "text" value = {inputValue} onChange = {changeInput} /> 
 
         <button id = "resetInput" onClick = {reset} > Reset </button>
       </div>

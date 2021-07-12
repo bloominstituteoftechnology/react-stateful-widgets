@@ -91,7 +91,7 @@ export default function Counter()
     marginBottom: '0.3em',
     /* STEP 2 
      * If count is even: royalBlue, else: crimson*/
-    color: ((count % 2 == 0) ? "royalblue": "crimson)", 
+    color: ((count % 2 == 0) ? "royalblue": "crimson"), 
   }
 
   //Function return statement
