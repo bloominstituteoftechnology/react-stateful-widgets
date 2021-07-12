@@ -48,8 +48,9 @@ STEP 6:
 
 /* STEP 0 */
 //Importing react (statehook)from react
+
 //Import React from library react, extends jsx code functionality to the project
-import React from "react";
+import React, { useState } from "react";
 
 //counter function definition
 export default function Counter() 
@@ -57,7 +58,7 @@ export default function Counter()
   /* STEP 1 */
   //Destructure
   //Declare useState(), init () to 0
-  const {count, setCount } = useState(0);
+  const [count, setCount ] = useState(0);
 
   /* STEP 4 */
   //Define the increment function

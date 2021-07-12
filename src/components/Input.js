@@ -38,7 +38,7 @@ Whether the text shows royalblue or crimson can be derived from the length of th
 /* STEP 0 */
 //Importing react (statehook)from react
 //Import React from library react, extends jsx code functionality to the project
-import React from "react";
+import React,{useState} from  "react";
 
 
 
@@ -46,9 +46,8 @@ import React from "react";
 //Define the Input function
 export default function Input() 
 {
-  //Destructure
   //Declare state variable, input value" "
-  const {inputValue, setInputValue } = useState(" ");
+  const [inputValue, setInputValue ] = useState("");
 
   /* STEP 4 */
   //Define the changeInput function, takes event object
@@ -69,7 +68,7 @@ export default function Input()
   const reset = () => 
   {
     //Set the input to empty string
-    setInputValue(" ")
+    setInputValue("")
   };
 
   //Define the style and assign to style

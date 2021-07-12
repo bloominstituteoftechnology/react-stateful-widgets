@@ -14,32 +14,54 @@ Only one square (or none) can be active at any given point.
 Find comments below to help you along.
 */
 
-import React from 'react';
+//Importing react (statehook)from react
+//Import React from library react, extends jsx code functionality to the project
+import React, { useState } from "react";
 
 // Use this variable ONLY to initialize a slice of state!
 const listOfSquareIds = ['sqA', 'sqB', 'sqC', 'sqD'];
 
-export default function Squares() {
-  // Use the state hook twice, as we need two slices of state: 'squares' and
-  // 'activeSquare'. One holds the _array_ of square ids, and the other keeps track
-  // of the currently active square. On page load there's no active square,
-  // so the value of 'activeSquare' should be null.
+/*Use the state hook twice, as we need two slices of state: 'squares' and
+'activeSquare'. One holds the _array_ of square ids, and the other keeps track
+of the currently active square. On page load there's no active square,
+so the value of 'activeSquare' should be null.*/
 
-  const getClassName = id => {
-    // This is NOT a click handler but a helper, used inside the JSX (see below).
-    // It should return a string containing the class name of 'active', if the id passed
-    // as the argument matches the active square in state, empty string otherwise.
-    // Right-click and "inspect element" on the square to see its effect.
-    return ''
+//Function definition, no parameters
+export default function Squares() 
+{
+  //Declare state variable, init with array of square IDs
+  const [squares] = useState(listOfSquareIds);
+  
+  //Declare state variable, set function.init to null 
+  const [ activeSquare, setActiveSquare] = useState(null)
+
+    /*This is NOT a click handler but a helper, used inside the JSX (see below).
+    It should return a string containing the class name of 'active', if the id passed
+    as the argument matches the active square in state, empty string otherwise.
+    Right-click and "inspect element" on the square to see its effect.*/
+  
+  //Function definition, pass in id
+  const getClassName = id => 
+  {
+    //Function return statement
+    //If id = active square, return string class active. else return ""
+    return activeSquare == id ? " active" : " ";
   };
 
-  const markActive = id => {
-    // This is a helper used inside an _inlined_ click handler (see below).
-    // Set the id argument to become the active id in state
-    // (unless it already is, in which case we should reset
-    // the currently active square id back to initial state).
+  /* This is a helper used inside an _inlined_ click handler (see below).
+    Set the id argument to become the active id in state
+   (unless it already is, in which case we should reset
+    the currently active square id back to initial state).*/
+
+  //Function definition, pass in id
+  const markActive = id => 
+  {
+    //Set active square to id
+    //If activesquare = id, toggle the active square off, else on.
+    (activeSquare === id) ? setActiveSquare(!id) : setActiveSquare(id);
   };
 
+  //Define the return function, pass in jsx code
   return (
     <div className='widget-squares container'>
       <h2>Squares</h2>
@@ -48,7 +70,9 @@ export default function Squares() {
           // Nasty bug! We should map over a slice of state, instead of 'listOfSquareIds'.
           // We might say: "it works, though!" But if the list of squares is not state,
           // we could never add squares, change squares or remove squares in the future. Fix!
-          listOfSquareIds.map(id =>
+          
+          //Replaced array name with state variable
+          squares.map(id =>
             <div
               id={id}
               key={id}
