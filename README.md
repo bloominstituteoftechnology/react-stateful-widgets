@@ -82,4 +82,4 @@ The move by the computer should probably be random if the previous checks turn o
 
 ## Rick's Pull Request
 
-- [Pull Request]()
+- [Pull Request](https://github.com/LambdaSchool/react-stateful-widgets/pull/220)
