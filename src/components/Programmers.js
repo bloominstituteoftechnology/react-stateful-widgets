@@ -50,15 +50,8 @@ export default function Programmers()
   const getNameOfFeatured = () => 
   {
     //Return statement, return the programmer id .name
-    //return programmersArray[programmersId - 1] .name;
-    for (let i = 0; i < programmersArray.length; i++) 
-    {
-      if (programmersArray[i].name === nameKey) 
-      {
-          return programmersArray[i];
-      }
-    }
-    return nameKey
+    return programmersArray[programmersId - 1].name;
+  
   };
 
   
