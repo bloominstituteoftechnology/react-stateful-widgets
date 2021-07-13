@@ -34,12 +34,12 @@ STEP 6:
   We need to add an extra prop to the <input /> element like so: value={inputValue}
 */
 
-import React from "react"; /* STEP 0 */
+import React, { useState } from "react"; /* STEP 0 */
 import { teal } from "color-name";
 
 export default function Input() {
   /* STEP 1 */
-  const [inputValue, setInputValue] = userState("");
+  const [inputValue, setInputValue] = useState("");
   const inputo = inputValue > 10;
 
   const changeInput = evt => {
