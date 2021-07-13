@@ -48,14 +48,14 @@ const [inputValue,setInputValue]= useState('')
     /* STEP 4 */
   };
   const reset = () => {
-    inputValue('');
+    setInputValue ('');
     /* STEP 5 */
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: length.inputValue > 9 ? 'crimson': 'royalblue', /* STEP 2 */
+    color: inputValue.length>9?'crimson':'royalblue' /* STEP 2 */
   };
 
   return (
@@ -63,8 +63,8 @@ const [inputValue,setInputValue]= useState('')
       <h2>Input</h2>
       <div id='output' style={style}>{inputValue.toUpperCase()}</div> {/* STEP 3 */}
       <div>
-        <input id='input' type='text' onChange={changeInput} value={inputValue}/> {/* STEP 6 */}
-        <button id='resetInput' onClick={reset}>Reset</button>
+        <input value={inputValue} id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
+        <button id='resetInput' onClick={reset} >Reset</button>
       </div>
     </div>
   );
