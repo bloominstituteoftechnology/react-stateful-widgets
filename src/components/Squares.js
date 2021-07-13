@@ -45,7 +45,7 @@ export default function Squares()
   {
     //Function return statement
     //If id = active square, return string class active. else return ""
-    return activeSquare == id ? " active" : " ";
+    return activeSquare === id ? " active" : " ";
   };
 
   /* This is a helper used inside an _inlined_ click handler (see below).

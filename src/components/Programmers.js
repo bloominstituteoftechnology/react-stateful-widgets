@@ -49,9 +49,13 @@ export default function Programmers()
   //getNameOfFeatured() definition, no parameters
   const getNameOfFeatured = () => 
   {
-    //Return statement, return the programmer id .name
-    return programmersArray[programmersId - 1].name;
+    // //Return statement, return the programmer id .name
+    // return programmersArray[programmersId - 1].name;
   
+    //Use .find to iterate the array.
+    const featuredDev = programmersId.find(dev => dev.id === programmersId)
+    //Return the name
+    return featuredDev.name;
   };
 
   
@@ -60,7 +64,7 @@ export default function Programmers()
   {
     fontSize: '1.5em',
     marginTop: '0.5em',
-    color: 'royalblue', // 🤔 color turns to gold, when celebrating
+    color: programmersId ? "gold" : "royalblue", // 🤔 color turns to gold, when celebrating
   };
 
   //Return() function definition, pass in the jsx code
@@ -90,7 +94,6 @@ export default function Programmers()
 
           //Replaced code with state variable
           programmersId
-          
             ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳`
             : 'Pick an awesome programmer'
         }
