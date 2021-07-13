@@ -34,10 +34,13 @@ STEP 6:
   We need to add an extra prop to the <input /> element like so: value={inputValue}
 */
 
-import React from 'react'; /* STEP 0 */
+import React from "react"; /* STEP 0 */
+import { teal } from "color-name";
 
 export default function Input() {
   /* STEP 1 */
+  const [inputValue, setInputValue] = userState("");
+  const inputo = inputValue > 10;
 
   const changeInput = evt => {
     // When the input changes, its whole value can be found inside the event object.
@@ -48,21 +51,24 @@ export default function Input() {
   };
   const reset = () => {
     /* STEP 5 */
+    [inputValue] = useState("");
   };
 
   const style = {
-    fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    fontSize: "1.5em",
+    marginBottom: "0.3em",
+    color: inputo ? "crimson" : "" /* STEP 2 */
   };
 
   return (
-    <div className='widget-input container'>
+    <div className="widget-input container">
       <h2>Input</h2>
-      <div id='output' style={style}></div> {/* STEP 3 */}
+      <div id="output" style={"Input".toUpperCase()}></div> {/* STEP 3 */}
       <div>
-        <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
-        <button id='resetInput' onClick={reset}>Reset</button>
+        <input id="input" type="text" onChange={changeInput} /> {/* STEP 6 */}
+        <button id="resetInput" onClick={reset}>
+          Reset
+        </button>
       </div>
     </div>
   );
