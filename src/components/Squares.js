@@ -25,7 +25,7 @@ export default function Squares() {
   // of the currently active square. On page load there's no active square,
   // so the value of 'activeSquare' should be null.
 
-const [squares] = usesState(listOfSquaresIds)
+const [squares] = useState(listOfSquaresIds)
 const [activeSquare, setActiveSquare] = useState(null)
 
   const getClassName = id => {
