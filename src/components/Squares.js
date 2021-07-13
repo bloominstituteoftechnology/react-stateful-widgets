@@ -25,7 +25,7 @@ export default function Squares() {
   // of the currently active square. On page load there's no active square,
   // so the value of 'activeSquare' should be null.
 
-const [squares] = useState(listOfSquaresIds)
+const [squares, setSquares] = useState(listOfSquaresIds)
 const [activeSquare, setActiveSquare] = useState(null)
 
   const getClassName = id => {
@@ -57,7 +57,7 @@ const [activeSquare, setActiveSquare] = useState(null)
             <div
               id={id}
               key={id}
-              className={`square${getClassName(id)}`}
+              className={`square ${getClassName(id)}`}
               onClick={() => markActive(id)}
             >
             </div>
