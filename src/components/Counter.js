@@ -15,10 +15,10 @@ A naive developer might say 3 different slices:
 But a single slice of state is all that's needed here: the count!
 The other things can simply be _derived_ from the count itself.
 
-STEP 0:
-  Start by studying the component below, and importing the state hook.
+STEP 0:x
+  Start by studying the component below, and importing the state hook. 
 
-STEP 1:
+STEP 1:x
   Using the state hook, create a 'count', 'setCount' pair.
   The 'count' state should be initialized to the number zero.
 
@@ -54,9 +54,6 @@ import React, { useState } from 'react';
 export default function Counter() {
 const [count, setCount] = useState(0)
 
-
-
-
    const increment = () => {
     setCount(count + 1)
   
@@ -69,7 +66,8 @@ const [count, setCount] = useState(0)
    };
 
   const reset = () => {
-     setCount( count === 0) 
+     setCount( count === 0)
+      
     
     /* STEP 6 */
   };
@@ -77,23 +75,22 @@ const [count, setCount] = useState(0)
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
-   color: count % 2 === 0 ? "crimson" : 'royalblue'
+    color: count % 2 === 0 ? "crimson" : 'royalblue'
   };
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number 0 is even - {/* STEP 3 */}
-         Number {count} is {(count % 2 === 0 ? <div> 'even' </div> : <div> 'odd'</div> )} 
+     
+         Number {count} is {count % 2 === 0 ? <div> 'Even' </div> : <div> 'Odd'</div> } 
 
       </div>
       <div>
-        <button id='increment' onClick={increment}>Increment</button>
-        <button id='decrement' onClick={decrement}>Decrement</button>
-        <button id='resetCount' onClick={reset}>Reset</button>
+        <button id='increment' onClick={increment}>Increment</button> 
+       
       </div>
+      <button id='resetCount' onClick={reset}>Reset</button>
     </div>
   );
 }

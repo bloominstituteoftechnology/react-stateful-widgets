@@ -10,10 +10,10 @@ the things that change in this widget? Give it some thought before continuing re
 Yup, a single slice of state is enough! In it we'll keep track of the value of the input.
 Whether the text shows royalblue or crimson can be derived from the length of the value of the input.
 
-STEP 0:
+STEP 0:x
   Study the component below, and import the state hook.
 
-STEP 1:
+STEP 1:x
   Create a slice of state called 'inputValue' and its 'setInputValue' buddy.
   We should initialize this state to the empty string.
 
@@ -38,48 +38,39 @@ import React, {useState} from 'react'; /* STEP 0 */
 
 export default function Input() {
   const [inputValue, setInputValue] = useState('')
-  /* STEP 1 */
 
   const changeInput = evt => {
-    // When the input changes, its whole value can be found inside the event object.
-    // Log out the synthetic event object 'evt' and see for yourself.
-   const { value } = evt.target;
-
-
-    /* STEP 4 */
-    setinputValue(evt.currentTarget.value);
+   const {value}  = evt.target;
+    setInputValue(value);
   };
- const reset = () => {
-    /* STEP 5 */
-   setInputValue('')
-  };
+
+  const changeIt = evt => {
+    const {uppercase} = evt.target;
+    setInputValue(uppercase)
+  }
+
+//*
+  const reset = () => {
+    setInputValue('');
+  }
 
   const style = {
-    fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
-    // color: (inputValue.length > 10) ? 'crimson' : 'royalblue',
-  };
+     fontSize: '1.5em',
+     marginBottom: '0.3em',
+  color: (inputValue.length <= 10 ? 'royalblue' : 'crimson'), 
+   };
 
-  const style2 = {
-    fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: 'crimson', /* STEP 2 */
-    // color: (inputValue.length > 10) ? 'crimson' : 'royalblue',
-  };
-
-  return (
+   return (
     <div className='widget-input container'>
-      <h2>Input</h2>
-      <div id='input' style={style}>{changeInput}</div>
-  <div id='output' style={style}></div> {/* STEP 3 */}
-      {/* <div> id='output' style={style}>{inputValue.toUpperCase()}</div> */}
-      <div>
-        <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
-        {/* <input value={inputValue} id='input' type='text' onChange={changeInput} /> */}
-        <button id='resetInput' onClick={reset}>Reset</button>
-      </div>
+    <h2>Input</h2>
+<div id='output' style={style}>{inputValue}</div>
+    <div>
+     <input id='input' type='text' onChange={changeInput}value={inputValue}/> 
+      <button id='resetInput' onClick={reset}>Reset</button>
     </div>
-  );
+  </div>
+);
+}
+   
 
-  }
+  
