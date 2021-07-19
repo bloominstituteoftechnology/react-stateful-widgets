@@ -28,31 +28,30 @@ export default function Squares() {
   // so the value of 'activeSquare' should be null.
 
   const getClassName = id => {
-    
+    return id === activeSquare ? "active" : ""
+  };
     // This is NOT a click handler but a helper, used inside the JSX (see below).
     // It should return a string containing the class name of 'active', if the id passed
     // as the argument matches the active square in state, empty string otherwise.
     // Right-click and "inspect element" on the square to see its effect.
-    return ''
-  };
+   
+
 
   const markActive = id => {
-    setActiveSquare(id) === id ? setActiveSquare(null) : setActiveSquare(id)
+    return setActiveSquare( id === activeSquare ? null : id)
+  };
     // This is a helper used inside an _inlined_ click handler (see below).
     // Set the id argument to become the active id in state
     // (unless it already is, in which case we should reset
     // the currently active square id back to initial state).
-  };
+  
 
   return (
     <div className='widget-squares container'>
       <h2>Squares</h2>
       <div className='squares'>
         {
-          // Nasty bug! We should map over a slice of state, instead of 'listOfSquareIds'.
-          // We might say: "it works, though!" But if the list of squares is not state,
-          // we could never add squares, change squares or remove squares in the future. Fix!
-          listOfSquareIds.map(id =>
+          squares.map(id =>
             <div
               id={id}
               key={id}
@@ -66,3 +65,7 @@ export default function Squares() {
     </div>
   );
 }
+
+// Nasty bug! We should map over a slice of state, instead of 'listOfSquareIds'.
+          // We might say: "it works, though!" But if the list of squares is not state,
+          // we could never add squares, change squares or remove squares in the future. Fix!
