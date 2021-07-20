@@ -75,7 +75,7 @@ const [count, setCount] = useState(0)
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: count % 2 === 0 ? "crimson" : 'royalblue'
+    color: (count % 2 === 0 ? "crimson" : 'royalblue')
   };
 
   return (
@@ -87,7 +87,8 @@ const [count, setCount] = useState(0)
 
       </div>
       <div>
-        <button id='increment' onClick={increment}>Increment</button> 
+        <button id='increment' onClick={increment}>Increase</button> 
+        <button id='increment' onClick={decrement}>Decrease</button> 
        
       </div>
       <button id='resetCount' onClick={reset}>Reset</button>
