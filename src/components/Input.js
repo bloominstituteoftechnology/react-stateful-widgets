@@ -41,11 +41,11 @@ export default function Input()
     /* STEP 1 */
     const [inputValue, setInputValue] = useState("");
 
-    const changeInput = (evt) =>
+    const changeInput = (event) =>
     {
         // When the input changes, its whole value can be found inside the event object.
         // Log out the synthetic event object 'evt' and see for yourself.
-        const { value } = evt.target;
+        const { value } = event.target;
 
         /* STEP 4 */
         setInputValue(value);
