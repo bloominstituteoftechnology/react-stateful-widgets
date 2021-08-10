@@ -2,6 +2,20 @@
 
 This project allows you to practice the concepts and techniques learned in this module and apply them in a concrete project. This module explored React components and component state. During the module, you studied what React is, what React components are and how to build them, what state is and how to make a component stateful, and how to update component state with click handlers. In this project you will demonstrate proficiency of these subjects and principles by fleshing out several stateful components.
 
+- [Module Project: React Components and Components State](#module-project-react-components-and-components-state)
+  - [Introduction](#introduction)
+    - [Commits](#commits)
+    - [Description](#description)
+  - [Instructions](#instructions)
+    - [Task 1: Project Set Up](#task-1-project-set-up)
+    - [Task 2a: Minimum Viable Product](#task-2a-minimum-viable-product)
+      - [Steps](#steps)
+    - [Task 3: Stretch Problems](#task-3-stretch-problems)
+      - [Stretch Goal 1 (To-Do List)](#stretch-goal-1-to-do-list)
+      - [Stretch Goal 2 (Tic-Tac-Toe)](#stretch-goal-2-tic-tac-toe)
+  - [Submission Format](#submission-format)
+  - [Rick's Pull Request](#ricks-pull-request)
+
 ## Introduction
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this project.**
@@ -65,3 +79,7 @@ The move by the computer should probably be random if the previous checks turn o
 ## Submission Format
 
 - [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+
+## Rick's Pull Request
+
+- [Pull Request](https://github.com/LambdaSchool/react-stateful-widgets/pull/220)
