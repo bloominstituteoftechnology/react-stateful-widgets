@@ -70,7 +70,7 @@ export default function Counter() {
     marginBottom: '0.3em',
     color: count % 2 ? "royalblue" : "crimsom", /* STEP 2 */
   };
-console.log(style.color);
+// console.log(style.color);
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
