@@ -54,7 +54,7 @@ export default function Counter() {
 
   const increment = () => {
     /* STEP 4 */
-    return setCount(count+1);
+    setCount(count+1);
   };
   const decrement = () => {
     /* STEP 5 */
