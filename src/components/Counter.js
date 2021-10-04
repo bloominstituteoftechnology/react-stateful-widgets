@@ -61,6 +61,7 @@ export default function Counter() {
     /* STEP 6 */
   };
 
+  //style
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
