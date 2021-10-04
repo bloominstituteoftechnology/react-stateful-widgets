@@ -39,7 +39,6 @@ export default function Programmers() {
     if (featuredProgrammer) {
       return programmers[featuredProgrammer - 1].name
     }
-
   };
 
   const style = {
