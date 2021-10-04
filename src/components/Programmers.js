@@ -15,7 +15,7 @@ import React,{useState} from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
 // There is something in the JSX right now breaking this rule...
-export const listOfAwesome = [
+  const listOfAwesome = [
   { id: '1', name: 'Ada Lovelace' },
   { id: '2', name: 'Grace Hopper' },
   { id: '3', name: 'Evelyn Boyd Granville' },
@@ -26,21 +26,21 @@ export const listOfAwesome = [
 
  function Programmers() {
    const [programmers]= useState(listOfAwesome);
-   const [featured, setFeatured] = useState(null)
+   const [featured, setFeatured] = useState(null);
   // We'll have to use the state hook twice, as we need two slices of state.
   // The programmers list on the one hand, and the id of the featured programmer on the other.
-
+ 
   const getNameOfFeatured = () => {
     // Leave this for last!
     // This is NOT an event handler but a helper function. See its usage inside the JSX.
     // It's going to utilize both slices of state to return the _name_ of the featured dev.
     // The beauty of closures is that we can "see" both slices of state from this region
     // of the program, without needing to inject the information through arguments.
-    return programmers.map(item =>{
-      item.id === featured.name);
-    })
+    return programmers.find(item => 
+      item.id === featured).name;
+    
+  
   };
-
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',
@@ -67,10 +67,11 @@ export const listOfAwesome = [
           // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
           // Pseudo-code: if the currently featured id is truthy render text 1, otherwise render text 2.
           // Replace the hard-coded false with the correct variable.
-          featured === true ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳`: 'Pick an awesome programmer'
+          featured  ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳`: 'Pick an awesome programmer'
         }
       </div>
     </div>
   );
 }
+ 
 export default Programmers;
