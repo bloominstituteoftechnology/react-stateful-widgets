@@ -61,7 +61,7 @@ export default function Input() {
       <h2>Input</h2>
       <div id='output' style={style}>{inputValue.toUpperCase()}</div> {/* STEP 3 */}
       <div>
-        <input id='input' type='text' onChange={(e) => changeInput(e)} value={inputValue} />
+        <input id='input' type='text' onChange={(props) => changeInput(props)} value={inputValue} />
         <button id='resetInput' onClick={reset}>Reset</button>
       </div>
     </div>
