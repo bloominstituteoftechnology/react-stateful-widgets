@@ -43,11 +43,11 @@ export default function Input() {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
     const { value } = evt.target;
-    
-    /* STEP 4 */
+    setInputValue(value)
+    console.log(value)
   };
   const reset = () => {
-    useState('')
+    setInputValue('')
   };
 
   const style = {
@@ -59,9 +59,11 @@ export default function Input() {
   return (
     <div className='widget-input container'>
       <h2>Input</h2>
-      <div id='output' style={style}></div> {/* STEP 3 */}
+      <div id='output' style={style}>{inputValue}</div> {/* STEP 3 */}
       <div>
-        <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
+        <input id='input' type='text' onChange={(e) => changeInput(e)} value={inputValue} /> {/* STEP 6 */}
+        {/*   For the input to reset correctly, it needs to "drink" its value from state!
+  We need to add an extra prop to the <input /> element like so: value={inputValue} */}
         <button id='resetInput' onClick={reset}>Reset</button>
       </div>
     </div>
