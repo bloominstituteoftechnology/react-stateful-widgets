@@ -11,7 +11,7 @@ We can only feature one awesome programmer at a time.
 Find comments below to help you along.
 */
 
-import React from 'react';
+import React,{useState} from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
 // There is something in the JSX right now breaking this rule...
@@ -24,7 +24,9 @@ export const listOfAwesome = [
   { id: '6', name: 'Carol Shaw' },
 ];
 
-export default function Programmers() {
+ function Programmers() {
+   const [programmers]= useState(listOfAwesome);
+   const [featured, setFeatured] = useState('id')
   // We'll have to use the state hook twice, as we need two slices of state.
   // The programmers list on the one hand, and the id of the featured programmer on the other.
 
@@ -70,3 +72,4 @@ export default function Programmers() {
     </div>
   );
 }
+export default Programmers;
