@@ -28,7 +28,7 @@ export default function Programmers() {
   // We'll have to use the state hook twice, as we need two slices of state.
   // The programmers list on the one hand, and the id of the featured programmer on the other.
   const [programmers, setProgrammers] = useState(listOfAwesome);
-  const [featuredProgrammers, setFeaturedProgrammers] = useState(null);
+  const [featuredProgrammers, setFeaturedId] = useState(null);
 
   const getNameOfFeatured = () => {
     // Leave this for last!
@@ -44,7 +44,7 @@ export default function Programmers() {
       }
     })
 
-    return name;
+    return programmers[featuredProgrammers - 1].name;
   };
 
   const style = {
@@ -63,7 +63,7 @@ export default function Programmers() {
           we could never add or edit programmers in the future. The list would be a static thing." */
           listOfAwesome.map(dev =>
             <div className='programmer' key={dev.id}>
-              {dev.name} <button onClick={() => { setFeaturedProgrammers(dev.id)}}>Feature</button>
+              {dev.name} <button onClick={() => { setFeaturedId(dev.id)}}>Feature</button>
             </div>
           )
         }
