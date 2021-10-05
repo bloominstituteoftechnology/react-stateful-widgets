@@ -63,13 +63,16 @@ export default function Counter() {
   };
   const reset = () => {
     /* STEP 6 */
-    
+    setCount (useState.count = 0);
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    color: function () {
+      count%2  == 0 ? 'royalblue' : 'crimson'
+    },    
+     /* STEP 2 */ 
   };
   
  
@@ -78,7 +81,6 @@ export default function Counter() {
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        {/* Number {count} is {isEven}  */}
         { count%2  == 0 ? <p>Number {count} is even </p> : <p>Number {count} is odd </p>}
         {/* STEP 3 */}
       </div>
