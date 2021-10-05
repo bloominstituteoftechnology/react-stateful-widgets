@@ -10,13 +10,6 @@ the things that change in this widget? Give it some thought before continuing re
 Yup, a single slice of state is enough! In it we'll keep track of the value of the input.
 Whether the text shows royalblue or crimson can be derived from the length of the value of the input.
 
-STEP 0:
-  Study the component below, and import the state hook.
-
-STEP 1:
-  Create a slice of state called 'inputValue' and its 'setInputValue' buddy.
-  We should initialize this state to the empty string.
-
 STEP 2:
   Make the color of the text be crimson if the length of 'inputValue' goes over ten.
 
@@ -34,10 +27,10 @@ STEP 6:
   We need to add an extra prop to the <input /> element like so: value={inputValue}
 */
 
-import React from 'react'; /* STEP 0 */
+import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Input() {
-  /* STEP 1 */
+
 
   const changeInput = evt => {
     // When the input changes, its whole value can be found inside the event object.
