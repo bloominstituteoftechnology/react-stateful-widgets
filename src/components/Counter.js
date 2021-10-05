@@ -75,7 +75,7 @@ export default function Counter() {
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number {count} is {count(even) ? 'even' : 'odd'} {/* STEP 3 */}
+        Number {count} is {count%2 === 0 ? 'even' : 'odd'} {/* STEP 3 */}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
