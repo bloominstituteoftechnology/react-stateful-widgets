@@ -54,7 +54,7 @@ const toggleSpinner = () => {
         spinnerOn && <div id='spinner' className='spinner'>--+--</div> /* STEP 2 */
       }
       <button id='toggleSpinner' onClick={toggleSpinner}>
-        {spinnerOn === true ? 'Hide' : 'Show'} {/* STEP 3 */}
+        {spinnerOn === true ? 'Hide spinner' : 'Show spinner'} {/* STEP 3 */}
       </button>
     </div>
   );
