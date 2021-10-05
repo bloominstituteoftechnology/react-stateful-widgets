@@ -20,6 +20,7 @@ import React, { useState } from 'react';
 const listOfSquareIds = ['sqA', 'sqB', 'sqC', 'sqD'];
 
 export default function Squares() {
+  // eslint-disable-next-line no-unused-vars
   const [squares, setSquares] = useState(listOfSquareIds);
   const [activeSquare, setActiveSquare] = useState(null);
   // Use the state hook twice, as we need two slices of state: 'squares' and
@@ -40,7 +41,7 @@ export default function Squares() {
     // Set the id argument to become the active id in state
     // (unless it already is, in which case we should reset
     // the currently active square id back to initial state).
-    return activeSquare!= null ? setActiveSquare(null) : setActiveSquare(id);
+    return activeSquare != null ? setActiveSquare(null) : setActiveSquare(id);
   };
 
   return (

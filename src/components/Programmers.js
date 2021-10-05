@@ -36,13 +36,13 @@ export default function Programmers() {
     // It's going to utilize both slices of state to return the _name_ of the featured dev.
     // The beauty of closures is that we can "see" both slices of state from this region
     // of the program, without needing to inject the information through arguments.
-
-    const featuredProgrammer = programmers.find(item => {
-      if (item.id === featureId) {
-        return item.name
-      }
-    })
-    return featuredProgrammer.name
+    return programmers[featureId-1].name
+    // (or) const featuredProgrammer = programmers.find(item => {
+    //   if (item.id === featureId) {
+    //     return item.name
+    //   }
+    // })
+    // return featuredProgrammer.name
   };
 
   const style = {
