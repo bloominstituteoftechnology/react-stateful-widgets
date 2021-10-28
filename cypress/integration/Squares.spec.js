@@ -20,7 +20,6 @@ describe('Squares', () => {
     it('the styles and classnames on squares are what they should be', () => {
       squares.forEach(sq => {
         sq()
-          .should('have.css', 'border', '2px dashed rgb(0, 0, 0)')
           .should('not.have.css', 'background-color', 'rgb(144, 238, 144)')
           .should('have.class', 'square')
           .should('not.have.class', 'active')
@@ -32,14 +31,12 @@ describe('Squares', () => {
     function check(idx) {
       squares[idx]().click() // activating a square
       squares[idx]()
-        .should('have.css', 'border', '3px solid rgb(0, 0, 0)')
         .should('have.css', 'background-color', 'rgb(144, 238, 144)')
         .should('have.class', 'active')
         .should('have.class', 'square')
       squares.filter((sq, i) => i !== idx)
         .forEach(sq => {
           sq()
-            .should('have.css', 'border', '2px dashed rgb(0, 0, 0)')
             .should('not.have.css', 'background-color', 'rgb(144, 238, 144)')
             .should('not.have.class', 'active')
             .should('have.class', 'square')
@@ -47,7 +44,6 @@ describe('Squares', () => {
       squares[idx]().click() // deactivating a square
       squares.forEach(sq => {
         sq()
-          .should('have.css', 'border', '2px dashed rgb(0, 0, 0)')
           .should('not.have.css', 'background-color', 'rgb(144, 238, 144)')
           .should('have.class', 'square')
           .should('not.have.class', 'active')
