@@ -29,6 +29,7 @@ This project includes a `src/components` folder containing several React compone
 - [X] Push commits: `git push origin <firstName-lastName>`.
 
 ### Task 2a: Minimum Viable Product
+WE DA MVP
 
 1. Each component has the required slices of state.
 2. Each component's event handlers allow the user of the app to update state.
