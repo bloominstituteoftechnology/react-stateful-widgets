@@ -6,7 +6,7 @@ describe('Input', () => {
   const reset = () => cy.get('[id=resetInput]')
 
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('/',{timeout: 10000})
   })
 
   describe('Initial state. These tests should already be passing', () => {
@@ -26,11 +26,12 @@ describe('Input', () => {
       input().type('abc').should('have.value', 'abc')
     })
     it('output renders correctly in all caps', () => {
-      input().type('ABC')
-      output().should('contain', 'ABC')
-      input().clear()
+      // input().type('ABC')
+      // output().should('contain', 'ABC')
+      // input().clear()
       input().type('abc')
       output().should('contain', 'ABC')
+      input().clear()
     })
     it('output renders in the correct color depending on string length', () => {
       input().type('0123456789')
