@@ -14,7 +14,7 @@ Only one square (or none) can be active at any given point.
 Find comments below to help you along.
 */
 
-import React from 'react';
+import React, { useState } from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
 const listOfSquareIds = ['sqA', 'sqB', 'sqC', 'sqD'];
@@ -24,13 +24,19 @@ export default function Squares() {
   // 'activeSquare'. One holds the _array_ of square ids, and the other keeps track
   // of the currently active square. On page load there's no active square,
   // so the value of 'activeSquare' should be null.
+  const [squares, setSquares] = useState(listOfSquareIds)
+  const [activeSquare, setActiceSquare] = useState(null)
 
   const getClassName = id => {
     // This is NOT a click handler but a helper, used inside the JSX (see below).
     // It should return a string containing the class name of 'active', if the id passed
     // as the argument matches the active square in state, empty string otherwise.
     // Right-click and "inspect element" on the square to see its effect.
-    return ''
+    if (id === activeSquare) {
+    return 'active'
+    } else {
+      return ""
+    }
   };
 
   const markActive = id => {
@@ -38,6 +44,11 @@ export default function Squares() {
     // Set the id argument to become the active id in state
     // (unless it already is, in which case we should reset
     // the currently active square id back to initial state).
+    if (id !== activeSquare) {
+    setActiceSquare(id)
+    } else {
+      setActiceSquare(null)
+    }
   };
 
   return (
