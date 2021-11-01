@@ -24,9 +24,9 @@ This project includes a `src/components` folder containing several React compone
 - [ x] Download project dependencies by running `npm install`.
 - [ x] Start up the app using `npm start`.
 - [ x] Optionally run tests using `npm test`. (The app must be running on `http://localhost:1234`)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [ x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [ x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [ x] Push commits: `git push origin <firstName-lastName>`.
 
 ### Task 2a: Minimum Viable Product
 
@@ -36,9 +36,9 @@ This project includes a `src/components` folder containing several React compone
 
 #### Steps
 
-- [ ] You will add functionality to all components inside inside `src/components`.
-- [ ] Work on the components **in the same order in which they display in Chrome** (to go from easiest challenge to hardest).
-- [ ] Each file includes a link to a video, and a set of instructions which can be summarized as:
+- [ x] You will add functionality to all components inside inside `src/components`.
+- [ x] Work on the components **in the same order in which they display in Chrome** (to go from easiest challenge to hardest).
+- [ x] Each file includes a link to a video, and a set of instructions which can be summarized as:
   - Watch the video demoing the finished component, and think about how much state is needed.
   - Create the necessary slices of component state using the state hook.
   - Fix the JSX so it displays information derived from state, instead of hard-coded data.
