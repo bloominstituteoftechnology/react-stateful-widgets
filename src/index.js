@@ -20,3 +20,8 @@ render(
   ,
   document.querySelector('#root')
 );
+
+
+// How many things can I return from a fucntion?
+// Answer: ONE, [1,2,3,4,5], { name: 'Casey', password: 'rocks'}
+// React fragments are open and close tags that are holding data
