@@ -12,6 +12,7 @@ so that the component knows which square is currently active.
 Only one square (or none) can be active at any given point.
 
 Find comments below to help you along.
+OKAY WE ARE DOING THIS IN THE MORNING I NEED MY NAP
 */
 
 import React from 'react';
