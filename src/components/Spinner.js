@@ -41,12 +41,6 @@ import React from 'react'; /* STEP 0 */
 
 export default function Spinner() {
 /* STEP 1 */
-
-  const toggleSpinner = () => {
-  /* STEP 4 */
-  };
-
-  return (
     <div className='widget-spinner container'>
       <h2>Spinner</h2>
       {
