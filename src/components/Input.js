@@ -56,13 +56,13 @@ export default function Input() {
     marginBottom: '0.3em',
     // color: 'royalblue', /* STEP 2 */
     color: `${(inputValue.length>10) ? 'crimson' : 'royalblue'}`,
-     textTransform: 'uppercase'
+    //  textTransform: 'uppercase' //this will have the same effect, however because of cypress testing it is not being detected. Using the toUpperCase method, as below instead, will pass the test
   };
 
   return (
     <div className='widget-input container'>
       <h2>Input</h2>
-      <div id='output' style={style}>{inputValue}</div> {/* STEP 3 */}
+      <div id='output' style={style}>{inputValue.toUpperCase()}</div> {/* STEP 3 */}
       <div>
         <input id='input' type='text' onChange={changeInput} value={inputValue}/> {/* STEP 6 */}
         <button id='resetInput' onClick={reset}>Reset</button>
