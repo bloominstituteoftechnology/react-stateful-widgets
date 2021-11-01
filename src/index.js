@@ -9,6 +9,7 @@ import Squares from './components/Squares';
 import Programmers from './components/Programmers';
 
 render(
+  // this element V is one element, known as a react fragment (when it includes no tag at all <></> )
   <>
     <Counter />
     <Moods />
