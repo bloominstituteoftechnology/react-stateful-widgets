@@ -56,9 +56,11 @@ export default function Counter() {
   };
   const decrement = () => {
     /* STEP 5 */
+    setCount(count - 1);
   };
   const reset = () => {
     /* STEP 6 */
+    setCount(0);
   };
 
   const style = {
