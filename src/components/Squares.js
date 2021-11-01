@@ -20,7 +20,7 @@ import React, {useState} from 'react';
 const listOfSquareIds = ['sqA', 'sqB', 'sqC', 'sqD'];
 
 export default function Squares() {
-  const [squares, setSquare] = useState(listOfSquareIds);
+  const [squares] = useState(listOfSquareIds);
   const [activeSquare, setActiveSquares] = useState(null);
   // Use the state hook twice, as we need two slices of state: 'squares' and
   // 'activeSquare'. One holds the _array_ of square ids, and the other keeps track
