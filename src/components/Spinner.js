@@ -37,7 +37,7 @@ STEP 4:
   Do you remember the operator we use to do "not"?
 */
 
-import React , { useState } from 'react'; /* STEP 0 */
+import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Spinner() {
 /* STEP 1 */
