@@ -18,17 +18,18 @@ This project includes a `src/components` folder containing several React compone
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN fork of the repository using your terminal.
-- [ ] CD into the project base directory.
-- [ ] Download project dependencies by running `npm install`.
-- [ ] Start up the app using `npm start`.
-- [ ] Optionally run tests using `npm test`. (The app must be running on `http://localhost:1234`)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Clone your OWN fork of the repository using your terminal.
+- [X] CD into the project base directory.
+- [X] Download project dependencies by running `npm install`.
+- [X] Start up the app using `npm start`.
+- [X] Optionally run tests using `npm test`. (The app must be running on `http://localhost:1234`)
+- [X] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [X] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [X] Push commits: `git push origin <firstName-lastName>`.
 
 ### Task 2a: Minimum Viable Product
+WE DA MVPasdfasdvadv
 
 1. Each component has the required slices of state.
 2. Each component's event handlers allow the user of the app to update state.
@@ -37,7 +38,7 @@ This project includes a `src/components` folder containing several React compone
 #### Steps
 
 - [ ] You will add functionality to all components inside inside `src/components`.
-- [ ] Work on the components **in the same order in which they display in Chrome** (to go from easiest challenge to hardest).
+- [ ] Work on the components **in the same order in which they display in FIREFOX** (to go from easiest challenge to hardest).
 - [ ] Each file includes a link to a video, and a set of instructions which can be summarized as:
   - Watch the video demoing the finished component, and think about how much state is needed.
   - Create the necessary slices of component state using the state hook.
