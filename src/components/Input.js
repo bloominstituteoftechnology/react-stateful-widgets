@@ -20,7 +20,7 @@ STEP 1: X
 STEP 2: X
   Make the color of the text be crimson if the length of 'inputValue' goes over ten.
 
-STEP 3: X
+STEP 3:
   Interpolate the value of the input inside this <div />. How can we make it show in ALL CAPS?
 
 STEP 4:
@@ -39,24 +39,25 @@ import { useState } from 'react';
 
 export default function Input() {
   /* STEP 1 */
-  const [inputValue, setInputValue] = useState('');
+const [inputValue, setInputValue] = useState('')
 
   const changeInput = evt => {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
     const { value } = evt.target;
+    //this is the same as const value = evt.target.value
     /* STEP 4 */
-
+    setInputValue(evt.target.value)
   };
-
   const reset = () => {
     /* STEP 5 */
+    setInputValue('')
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: (inputValue.length < 10 ? 'royalblue' : 'crimson' ), /* STEP 2 */
+    color: (inputValue.length > 10 ? 'crimson' : 'royalblue'), /* STEP 2 */
   };
 
   return (
@@ -64,7 +65,7 @@ export default function Input() {
       <h2>Input</h2>
       <div id='output' style={style}>{inputValue.toUpperCase()}</div> {/* STEP 3 */}
       <div>
-        <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
+        <input id='input' type='text' onChange={changeInput} value = {inputValue}  /> {/* STEP 6 */}
         <button id='resetInput' onClick={reset}>Reset</button>
       </div>
     </div>
