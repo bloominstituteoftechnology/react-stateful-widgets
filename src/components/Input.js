@@ -34,12 +34,13 @@ STEP 6:
   We need to add an extra prop to the <input /> element like so: value={inputValue}
 */
 
-import React from 'react'; /* STEP 0 */
+import React, {useState} from 'react'; /* STEP 0 */
 
 export default function Input() {
   /* STEP 1 */
-
+  const [inputValue, setInputValue] = useState('');
   const changeInput = evt => {
+    console.log(evt)
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
     const { value } = evt.target;
@@ -53,7 +54,7 @@ export default function Input() {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    color: inputValue < 10 ? 'royalblue' : 'crimson', /* STEP 2 */
   };
 
   return (
