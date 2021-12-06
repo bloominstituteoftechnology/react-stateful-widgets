@@ -11,35 +11,39 @@ We can only feature one awesome programmer at a time.
 Find comments below to help you along.
 */
 
-import React from 'react';
+import React, { useState } from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
 // There is something in the JSX right now breaking this rule...
 export const listOfAwesome = [
-  { id: '1', name: 'Ada Lovelace' },
-  { id: '2', name: 'Grace Hopper' },
-  { id: '3', name: 'Evelyn Boyd Granville' },
-  { id: '4', name: 'Mary Kenneth Keller' },
-  { id: '5', name: 'Frances Allen' },
-  { id: '6', name: 'Carol Shaw' },
+  { id: '0', name: 'Ada Lovelace' },
+  { id: '1', name: 'Grace Hopper' },
+  { id: '2', name: 'Evelyn Boyd Granville' },
+  { id: '3', name: 'Mary Kenneth Keller' },
+  { id: '4', name: 'Frances Allen' },
+  { id: '5', name: 'Carol Shaw' },
 ];
 
 export default function Programmers() {
   // We'll have to use the state hook twice, as we need two slices of state.
   // The programmers list on the one hand, and the id of the featured programmer on the other.
 
+  const [programmer, setProgrammer] = useState(listOfAwesome)
+  const [featured, setFeatured] = useState(null)
   const getNameOfFeatured = () => {
     // Leave this for last!
     // This is NOT an event handler but a helper function. See its usage inside the JSX.
     // It's going to utilize both slices of state to return the _name_ of the featured dev.
     // The beauty of closures is that we can "see" both slices of state from this region
     // of the program, without needing to inject the information through arguments.
+    // I could have done -1, but I didn't understand why that started at 1. I guess from someone on the outside looking in maybe it makes sense.
+    return (programmer[featured].name)
   };
 
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',
-    color: 'royalblue', // 🤔 color turns to gold, when celebrating
+    color: featured ? 'gold' : 'royalblue', // 🤔 color turns to gold, when celebrating
   };
 
   return (
@@ -52,7 +56,7 @@ export default function Programmers() {
           we could never add or edit programmers in the future. The list would be a static thing." */
           listOfAwesome.map(dev =>
             <div className='programmer' key={dev.id}>
-              {dev.name} <button onClick={() => { /* in here set the featured id to be dev.id */ }}>Feature</button>
+              {dev.name} <button onClick={() => {setFeatured(dev.id)}}>Feature</button>
             </div>
           )
         }
@@ -62,7 +66,7 @@ export default function Programmers() {
           // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
           // Pseudo-code: if the currently featured id is truthy render text 1, otherwise render text 2.
           // Replace the hard-coded false with the correct variable.
-          false
+          featured
             ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳`
             : 'Pick an awesome programmer'
         }
