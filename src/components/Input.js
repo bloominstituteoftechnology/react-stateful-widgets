@@ -10,17 +10,17 @@ the things that change in this widget? Give it some thought before continuing re
 Yup, a single slice of state is enough! In it we'll keep track of the value of the input.
 Whether the text shows royalblue or crimson can be derived from the length of the value of the input.
 
-STEP 0:
+STEP 0: X
   Study the component below, and import the state hook.
 
-STEP 1:
+STEP 1: X
   Create a slice of state called 'inputValue' and its 'setInputValue' buddy.
   We should initialize this state to the empty string.
 
-STEP 2:
+STEP 2: X
   Make the color of the text be crimson if the length of 'inputValue' goes over ten.
 
-STEP 3:
+STEP 3: X
   Interpolate the value of the input inside this <div />. How can we make it show in ALL CAPS?
 
 STEP 4:
@@ -35,17 +35,20 @@ STEP 6:
 */
 
 import React from 'react'; /* STEP 0 */
+import { useState } from 'react';
 
 export default function Input() {
   /* STEP 1 */
+  const [inputValue, setInputValue] = useState('');
 
   const changeInput = evt => {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
     const { value } = evt.target;
-
     /* STEP 4 */
+
   };
+
   const reset = () => {
     /* STEP 5 */
   };
@@ -53,13 +56,13 @@ export default function Input() {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    color: (inputValue.length < 10 ? 'royalblue' : 'crimson' ), /* STEP 2 */
   };
 
   return (
     <div className='widget-input container'>
       <h2>Input</h2>
-      <div id='output' style={style}></div> {/* STEP 3 */}
+      <div id='output' style={style}>{inputValue.toUpperCase()}</div> {/* STEP 3 */}
       <div>
         <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
         <button id='resetInput' onClick={reset}>Reset</button>
