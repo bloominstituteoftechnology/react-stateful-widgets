@@ -1,16 +1,3 @@
-/*
-PROGRAMMERS Instructions
-
-Watch this short video:
-https://tk-assets.lambdaschool.com/1ea6e6a2-2ef1-45de-bcab-b99a8f775870_programmers.gif
-
-This component keeps track of a list of pioneers in the field of programming on the one hand,
-and the id of the currently featured programmer on the other. That's two slices of state!
-We can only feature one awesome programmer at a time.
-
-Find comments below to help you along.
-*/
-
 import React from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
