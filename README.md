@@ -36,9 +36,9 @@ This project includes a `src/components` folder containing several React compone
 
 #### Steps
 
-- [ ] You will add functionality to all components inside inside `src/components`.
-- [ ] Work on the components **in the same order in which they display in Chrome** (to go from easiest challenge to hardest).
-- [ ] Each file includes a link to a video, and a set of instructions which can be summarized as:
+- [x ] You will add functionality to all components inside inside `src/components`.
+- [x ] Work on the components **in the same order in which they display in Chrome** (to go from easiest challenge to hardest).
+- [x ] Each file includes a link to a video, and a set of instructions which can be summarized as:
   - Watch the video demoing the finished component, and think about how much state is needed.
   - Create the necessary slices of component state using the state hook.
   - Fix the JSX so it displays information derived from state, instead of hard-coded data.
@@ -64,4 +64,4 @@ The move by the computer should probably be random if the previous checks turn o
 
 ## Submission Format
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+- [x ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**

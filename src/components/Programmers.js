@@ -42,7 +42,7 @@ export default function Programmers() {
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',
-    color: programmerID != null ? 'gold' : 'royalblue', // 🤔 color turns to gold, when celebrating
+    color: programmerID ? 'gold' : 'royalblue', // 🤔 color turns to gold, when celebrating
   };
 
   return (
@@ -65,7 +65,7 @@ export default function Programmers() {
           // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
           // Pseudo-code: if the currently featured id is truthy render text 1, otherwise render text 2.
           // Replace the hard-coded false with the correct variable.
-          programmerID != null
+          programmerID
             ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳`
             : 'Pick an awesome programmer'
         }
