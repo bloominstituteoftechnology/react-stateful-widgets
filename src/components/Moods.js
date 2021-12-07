@@ -28,7 +28,7 @@ STEPS 4, 5, 6:
   Inside these click handlers set the correct mood, using 'setMood' and the variables below the imports.
 */
 
-import React, { useState } from 'react'; /* STEP 0 */
+import React, { useState } from 'react';
 
 const initialMood = 'Not sure how I feel';
 const happyMood = 'Quite happy!';
@@ -59,7 +59,7 @@ export default function Moods() {
   return (
     <div className='widget-moods container'>
       <h2>Moods</h2>
-      <div id='mood' style={style}>{mood}</div> {/* STEP 3 */}
+      <div id='mood' style={style}>{mood}</div>
       <div>
         <button id='makeHappy' onClick={makeHappy}>Make Happy</button>
         <button id='makeSad' onClick={makeSad}>Make Sad</button>
