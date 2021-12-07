@@ -35,8 +35,7 @@ STEP 3:
 STEP 4:
   This click handler needs to use 'setCount' to schedule the 'count' to become the current 'count' plus one.
   These state changes are not synchronous: the updated count arrives on the next run of the Counter component.
-  Do NOT simply do count++. The plus plus is forbidden! We never mutate a slice of state in place. Even if you could
-  reassign a const, React would not be aware anything changed. Always use the state updater, passing in a new value.
+  Do NOT simply do count++. The plus plus is forbidden! We never mutate a slice of state in place. Even if you could reassign a const, React would not be aware anything changed. Always use the state updater, passing in a new value.
 
 STEP 5:
   This click handler needs to use 'setCount' to set the 'count' to be the current 'count' minus one.
@@ -46,32 +45,38 @@ STEP 6:
   This click handler needs to use 'setCount' to set the 'count' to be zero again.
 */
 
-import React from 'react'; /* STEP 0 */
+import React, {useState} from 'react'; /* STEP 0 */
 
-export default function Counter() {
+export default function Counter(props) {
   /* STEP 1 */
+const [count, setCount] = useState(0)
 
   const increment = () => {
     /* STEP 4 */
+  
+    setCount(count + 1)
+    
   };
   const decrement = () => {
     /* STEP 5 */
+      setCount(count - 1)
   };
   const reset = () => {
     /* STEP 6 */
+    setCount(0)
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+   color: count%2 == 0 ? 'royalblue' : 'crimson', /* STEP 2 you can use a ternary op here (check if number is even or odd js) */
   };
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number 0 is even {/* STEP 3 */}
+        Number {count} is {count%2 == 0 ? 'even' : 'odd'}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
