@@ -36,6 +36,7 @@ const [featured, setFeatured] = useState(null);
     // It's going to utilize both slices of state to return the _name_ of the featured dev.
     // The beauty of closures is that we can "see" both slices of state from this region
     // of the program, without needing to inject the information through arguments.
+    return programmers.find(prog => prog.id === featured).name;
   };
 
   const style = {
@@ -54,7 +55,7 @@ const [featured, setFeatured] = useState(null);
           we could never add or edit programmers in the future. The list would be a static thing." */
           programmers.map(dev =>
             <div className='programmer' key={dev.id}>
-              {dev.name} <button onClick={() => { /* in here set the featured id to be dev.id */ }}>Feature</button>
+              {dev.name} <button onClick={() => { setFeatured(dev.id) }}>Feature</button>
             </div>
           )
         }
