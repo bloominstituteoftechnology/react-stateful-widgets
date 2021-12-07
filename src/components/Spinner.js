@@ -53,7 +53,7 @@ const [spinnerOn, setSpinnerOn] = useState(true);
         spinnerOn && <div id='spinner' className='spinner'>--+--</div>
       }
       <button id='toggleSpinner' onClick={toggleSpinner}>
-        {spinnerOn ? 'Hide Spinner' : 'Show'}  {/* STEP 3 */}
+        {spinnerOn ? 'Hide Spinner' : 'Show'}
       </button>
     </div>
   );
