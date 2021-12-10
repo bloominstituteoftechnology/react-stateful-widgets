@@ -5,7 +5,7 @@ Watch this short video carefully, paying attention to the UI and Chrome Devtools
 https://tk-assets.lambdaschool.com/59036a85-0980-42c8-81ad-9afc8354497f_counter-clip.gif
 
 How many slices of state do you think are necessary to act as "sources of truth" for all
-the things that change in this widget? Give it some thought before continuing reading!
+the things that change in this widget? Give it some thought before continuing reading! 1
 
 A naive developer might say 3 different slices:
   - The count
@@ -46,37 +46,46 @@ STEP 6:
   This click handler needs to use 'setCount' to set the 'count' to be zero again.
 */
 
-import React from 'react'; /* STEP 0 */
+import React from "react";
+import React, { useState } from "react";
+/* STEP 0 */
 
 export default function Counter() {
+  const [count, setCount] = useState(0);
   /* STEP 1 */
 
   const increment = () => {
-    /* STEP 4 */
+    /* STEP 4 */ setCount(count + 1);
   };
   const decrement = () => {
-    /* STEP 5 */
+    /* STEP 5 */ setCount(count - 1);
   };
   const reset = () => {
-    /* STEP 6 */
+    /* STEP 6 */ setCount(0);
   };
 
   const style = {
-    fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    fontSize: "1.5em",
+    marginBottom: "0.3em",
+    color: state % 2 === 0 ? royalBlue : crimson,
   };
 
   return (
-    <div className='widget-counter container'>
+    <div className="widget-counter container">
       <h2>Counter</h2>
-      <div id='count' style={style}>
-        Number 0 is even {/* STEP 3 */}
+      <div id="count" style={style}>
+        Number {count} is {count % 2 === 0 ? "even" : "odd"} {/* STEP 3 */}
       </div>
       <div>
-        <button id='increment' onClick={increment}>Increment</button>
-        <button id='decrement' onClick={decrement}>Decrement</button>
-        <button id='resetCount' onClick={reset}>Reset</button>
+        <button id="increment" onClick={increment}>
+          Increment
+        </button>
+        <button id="decrement" onClick={decrement}>
+          Decrement
+        </button>
+        <button id="resetCount" onClick={reset}>
+          Reset
+        </button>
       </div>
     </div>
   );
