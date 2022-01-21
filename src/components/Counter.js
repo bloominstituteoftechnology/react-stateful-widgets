@@ -52,7 +52,7 @@ export default function Counter() {
   /* STEP 1 */
 
   const increment = () => {
-    /* STEP 4 */
+    siuiiajah
   };
   const decrement = () => {
     /* STEP 5 */
