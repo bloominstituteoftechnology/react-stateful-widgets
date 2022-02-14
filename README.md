@@ -24,9 +24,7 @@ This project includes a `src/components` folder containing several React compone
 - [ ] Download project dependencies by running `npm install`.
 - [ ] Start up the app using `npm start`.
 - [ ] Optionally run tests using `npm test`. (The app must be running on `http://localhost:1234`)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [ ] Push commits: `git push origin main`.
 
 ### Task 2a: Minimum Viable Product
 
@@ -64,4 +62,4 @@ The move by the computer should probably be random if the previous checks turn o
 
 ## Submission Format
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+- [ ] Submit a link to your repo in canvas.
