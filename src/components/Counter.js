@@ -67,6 +67,7 @@ export default function Counter() {
     /* STEP 5 */
   };
   const reset = () => {
+    setCount(0);
     /* STEP 6 */
   };
 
@@ -85,7 +86,7 @@ export default function Counter() {
       <div>
       <button id='increment' onClick={() => setCount(count + 1)}>Increment</button>
       <button id='decrement' onClick={() => setCount(count - 1)}>Decrement</button>
-        <button id='resetCount' onClick={() => setCount(useState(0))}>Reset</button>
+        <button id='resetCount' onClick={() => setCount(0)}>Reset</button>
       </div>
     </div>
   );
