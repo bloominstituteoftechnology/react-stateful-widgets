@@ -62,4 +62,4 @@ The move by the computer should probably be random if the previous checks turn o
 
 ## Submission Format
 
-- [ ] Submit a link to your repo in canvas.
+- [X] Submit a link to your repo in canvas.
