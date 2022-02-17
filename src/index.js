@@ -18,6 +18,6 @@ render(
     <Programmers />
   </>
   ,
-  // ! this query selector gives access to the index.html file with the root id!
+  // ! this query selector gives access to the index.html file with the root id
   document.querySelector('#root')
 );
