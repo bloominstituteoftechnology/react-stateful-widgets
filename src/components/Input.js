@@ -62,8 +62,8 @@ export default function Input() {
       <h2>Input</h2>
       <div style={style}>{inputValue.toUpperCase()}</div> {/* STEP 3 */}
       <div>
-      <input id='input' value={inputValue} type='text' onChange={changeInput} /> {/* STEP 6 */}
-        <button id='resetInput' onClick={() => setInputValue('')}>Reset</button>{/* STEP 6 */}
+      <input id='input' value={inputValue} type='text' onChange={changeInput} /> 
+        <button id='resetInput' onClick={() => setInputValue('')}>Reset</button>
       </div>
     </div>
   );
