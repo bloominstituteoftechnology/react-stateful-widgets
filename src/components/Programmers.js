@@ -19,6 +19,7 @@ export const listOfAwesome = [
   { id: '4', name: 'Mary Kenneth Keller' },
   { id: '5', name: 'Frances Allen' },
   { id: '6', name: 'Carol Shaw' },
+  { id: '7', name: 'Marie Knowlton' }
 ];
 
 export default function Programmers() {
