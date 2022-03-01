@@ -18,13 +18,13 @@ This project includes a `src/components` folder containing several React compone
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN fork of the repository using your terminal.
-- [ ] CD into the project base directory.
-- [ ] Download project dependencies by running `npm install`.
-- [ ] Start up the app using `npm start`.
-- [ ] Optionally run tests using `npm test`. (The app must be running on `http://localhost:1234`)
-- [ ] Push commits: `git push origin main`.
+- [x ] Create a forked copy of this project.
+- [x ] Clone your OWN fork of the repository using your terminal.
+- [x ] CD into the project base directory.
+- [x ] Download project dependencies by running `npm install`.
+- [x ] Start up the app using `npm start`.
+- [x ] Optionally run tests using `npm test`. (The app must be running on `http://localhost:1234`)
+- [x ] Push commits: `git push origin main`.
 
 ### Task 2a: Minimum Viable Product
 
@@ -63,3 +63,50 @@ The move by the computer should probably be random if the previous checks turn o
 ## Submission Format
 
 - [ ] Submit a link to your repo in canvas.
+
+
+##### COUNTER Instructions
+
+Watch this short video carefully, paying attention to the UI and Chrome Devtools:
+https://tk-assets.lambdaschool.com/59036a85-0980-42c8-81ad-9afc8354497f_counter-clip.gif
+
+How many slices of state do you think are necessary to act as "sources of truth" for all
+the things that change in this widget? Give it some thought before continuing reading!
+
+A naive developer might say 3 different slices:
+  - The count
+  - Whether the text is color crimson or royalblue
+  - Whether the text reads "even" or "odd"
+
+But a single slice of state is all that's needed here: the count!
+The other things can simply be _derived_ from the count itself.
+
+STEP 0:
+  Start by studying the component below, and importing the state hook.
+
+STEP 1:
+  Using the state hook, create a 'count', 'setCount' pair.
+  The 'count' state should be initialized to the number zero.
+
+STEP 2:
+  The 'style' object has the 'color' property hard-coded to "royalblue".
+  What the value of 'color' should be instead is a ternary expression that goes like this:
+  If count is even, then "royalblue", else "crimson".
+
+STEP 3:
+  We need to replace some hard-coded info in the JSX with expressions, interpolated inside curly brackets.
+  Start by replacing the character "0" with {count}. The 'count' slice of state is the source of truth here.
+  Then, replace the word "even" with a ternary: {if count is even number, then string "even", else string "odd"}.
+
+STEP 4:
+  This click handler needs to use 'setCount' to schedule the 'count' to become the current 'count' plus one.
+  These state changes are not synchronous: the updated count arrives on the next run of the Counter component.
+  Do NOT simply do count++. The plus plus is forbidden! We never mutate a slice of state in place. Even if you could
+  reassign a const, React would not be aware anything changed. Always use the state updater, passing in a new value.
+
+STEP 5:
+  This click handler needs to use 'setCount' to set the 'count' to be the current 'count' minus one.
+  Do NOT do count--. That amounts to trying to mutate 'count' in place. This is the road to perdition.
+
+STEP 6:
+  This click handler needs to use 'setCount' to set the 'count' to be zero again.
