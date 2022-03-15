@@ -65,7 +65,10 @@ export default function Input() {
   Interpolate the value of the input inside this <div />. How can we make it show in ALL CAPS? */}
       <div id='output' style={style}>{inputValue.toUpperCase()}</div> {/* STEP 3 */}
       <div>
-        <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
+      {/* STEP 6:
+  For the input to reset correctly, it needs to "drink" its value from state!
+  We need to add an extra prop to the <input /> element like so: value={inputValue}*/}
+        <input id='input' type='text' value={inputValue} onChange={changeInput} /> {/* STEP 6 */}
         <button id='resetInput' onClick={reset}>Reset</button>
       </div>
     </div>
