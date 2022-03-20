@@ -14,7 +14,7 @@ Find comments below to help you along.
 import React, {useState} from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
-// There is something in the JSX right now breaking this rule...f
+// There is something in the JSX right now breaking this rule...
 export const listOfAwesome = [
   { id: '1', name: 'Ada Lovelace' },
   { id: '2', name: 'Grace Hopper' },
@@ -36,12 +36,15 @@ export default function Programmers() {
     // It's going to utilize both slices of state to return the _name_ of the featured dev.
     // The beauty of closures is that we can "see" both slices of state from this region
     // of the program, without needing to inject the information through arguments.
-    for (let i = 0; i < programmers.length; i++) {
-      if (programmers[i].id === featured) {
-        return programmers[i].name;
-      }
-    }
-    return programmers.find(programmer => programmer.id === featured ? programmer.name : null);
+
+    // for (let i = 0; i < programmers.length; i++) {
+    //   if (programmers[i].id === featured) {
+    //     return programmers[i].name;
+    //   }
+    // }
+
+    const programmerObject =  programmers.find(programmer => programmer.id === featured);
+    return programmerObject.name;
   };
 
   const style = {
