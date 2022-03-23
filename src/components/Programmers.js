@@ -41,7 +41,7 @@ export default function Programmers() {
         return programmers[i].name;
       }
     };
-   
+  }
 
   const style = {
     fontSize: '1.5em',
