@@ -15,7 +15,7 @@ import React from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
 // There is something in the JSX right now breaking this rule...
-export const listOfAwesome = [
+const listOfAwesome = [
   { id: '1', name: 'Ada Lovelace' },
   { id: '2', name: 'Grace Hopper' },
   { id: '3', name: 'Evelyn Boyd Granville' },
