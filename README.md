@@ -1,4 +1,4 @@
-# Module Project: React Components and Components State
+# Module Project: React Components and Components State -------------------------------
 
 This project allows you to practice the concepts and techniques learned in this module and apply them in a concrete project. This module explored React components and component state. During the module, you studied what React is, what React components are and how to build them, what state is and how to make a component stateful, and how to update component state with click handlers. In this project you will demonstrate proficiency of these subjects and principles by fleshing out several stateful components.
 
@@ -10,7 +10,7 @@ This project allows you to practice the concepts and techniques learned in this 
 
 Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any number of reasons.
 
-### Description
+### Description--------------------------------------------
 
 This project includes a `src/components` folder containing several React components. In their current form these components are stateless and display hard-coded information only. You will make the app interactive by going into each component, adding state and implementing event handlers and helper functions to allow the users of the app to update state by interacting with the page.
 
