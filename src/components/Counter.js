@@ -57,10 +57,10 @@ export default function Counter() {
   };
   const decrement = () => {
     /* STEP 5 */
-    setCount(count + 1);
+    setCount(count - 1);
   };
   const reset = () => {
-    setCount(count = 0);
+    setCount(0);
   };
 
   const style = {
