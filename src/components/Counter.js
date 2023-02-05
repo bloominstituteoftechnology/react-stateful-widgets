@@ -50,7 +50,7 @@ import React, { userstate } from 'react'; /* STEP 0 */
 
 export default function Counter() {
   /* STEP 1 */
-
+const [count, setCount] = (0);
   const increment = () => {
     /* STEP 4 */
   };
