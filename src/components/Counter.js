@@ -57,6 +57,7 @@ const [count, setCount] = (0);
   };
   const decrement = () => {
     /* STEP 5 */
+    setCount(count - 1);
   };
   const reset = () => {
     /* STEP 6 */
