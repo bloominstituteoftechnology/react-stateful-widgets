@@ -61,6 +61,7 @@ const [count, setCount] = (0);
   };
   const reset = () => {
     /* STEP 6 */
+    setCount(0);
   };
 
   const style = {
