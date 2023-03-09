@@ -11,7 +11,7 @@ We can only feature one awesome programmer at a time.
 Find comments below to help you along.
 */
 
-import React from 'react';
+import React, {useState} from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
 // There is something in the JSX right now breaking this rule...
@@ -28,8 +28,16 @@ export const listOfAwesome = [
 export default function Programmers() {
   // We'll have to use the state hook twice, as we need two slices of state.
   // The programmers list on the one hand, and the id of the featured programmer on the other.
-
+ const [programmers, setProgrammers] = useState(listOfAwesome)
+ const [featured, setFeatured]= useState(null)
   const getNameOfFeatured = () => {
+
+    // for (let i = 0 ; i < programmers.length; i++){
+    //   if(programmers.id === featured){
+    //     return programmers[i].name
+    //   
+    const foundDev = programmers.find(dev => dev.id ===featured)
+    return foundDev.name
     // Leave this for last!
     // This is NOT an event handler but a helper function. See its usage inside the JSX.
     // It's going to utilize both slices of state to return the _name_ of the featured dev.
@@ -51,21 +59,21 @@ export default function Programmers() {
           /* Nasty bug! We should map over a slice of state, instead of 'listOfAwesome'.
           We might think: "it works, though!" But if the list of programmers is not state,
           we could never add or edit programmers in the future. The list would be a static thing." */
-          listOfAwesome.map(dev =>
+          programmers.map(dev =>
             <div className='programmer' key={dev.id}>
-              {dev.name} <button onClick={() => { /* in here set the featured id to be dev.id */ }}>Feature</button>
+              {dev.name} <button onClick={() => { setFeatured(dev.id)/* in here set the featured id to be dev.id */ }}>Feature</button>
             </div>
           )
         }
       </div>
       <div id='featured' style={style}>
         {
+          featured
           // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
           // Pseudo-code: if the currently featured id is truthy render text 1, otherwise render text 2.
           // Replace the hard-coded false with the correct variable.
-          false
-            ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳`
-            : 'Pick an awesome programmer'
+          
+            ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳` : "Pick an awesome programmer"
         }
       </div>
     </div>
