@@ -54,7 +54,7 @@ const [inputValue, setInputValue] = useState("")
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: inputValue.length >= 10 ? "crimson" : "royalblue", /* STEP 2 */
+    color: inputValue.length > 10 ? "crimson" : "royalblue", /* STEP 2 */
   };
  
 
