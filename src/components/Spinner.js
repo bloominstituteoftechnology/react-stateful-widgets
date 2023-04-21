@@ -37,7 +37,7 @@ STEP 4:
   Do you remember the operator we use to do "not"?
 */
 
-import React from 'react'; /* STEP 0 */
+import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Spinner() {
 /* STEP 1 */
@@ -56,7 +56,7 @@ const [spinnerOn, setSpinnerOn] = useState(true);
         spinnerOn && <div id='spinner' className='spinner'>--+--</div> /* STEP 2 */
       }
       <button id='toggleSpinner' onClick={toggleSpinner}>
-       {spinnerOn ? "Hide" : "Show"} Spinner {/* STEP 3 */}
+       {spinnerOn ? "Hide" : "Show"} Spinner
       </button>
     </div>
   );
