@@ -32,7 +32,7 @@ This project includes a `src/components` folder containing several React compone
 
 #### Steps
 
-- [ ] You will add functionality to all components inside inside `src/components`.
+- [ ] You will add functionality to all components inside inside `frontend/components`.
 - [ ] Work on the components **in the same order in which they display in Chrome** (to go from the easiest challenge to the hardest).
 - [ ] Each file includes a design file and a set of instructions. The instructions are generally the following:
   - Watch the design file showing the finished component, and think about how much state is needed.
