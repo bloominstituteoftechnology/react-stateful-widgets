@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'Titillium Web';
+  src: url('../fonts/TitilliumWeb-SemiBold.ttf');
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  border: 1rem solid #ff4b00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1,
+h2 {
+  color: #93005a;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+#root {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+header,
+footer {
+  padding: 1rem;
+}
+
+button,
+input {
+  margin: 3px;
+  color: #7a6a6a;
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 3px;
+  height: 1.8em;
+}
+
+button:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 350px;
+  background-color: white;
+  margin: 0.5rem;
+  padding: 1.5rem;
+  padding-top: 1.1rem;
+  border: 1px solid rgb(210, 210, 210);
+  box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+  border-radius: 16px;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.spinner {
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotate 1s linear forwards infinite;
+}
+
+.squares {
+  display: grid;
+  grid-template-columns: 50px 50px;
+  grid-template-rows: 50px 50px;
+  column-gap: 10px;
+  row-gap: 10px;
+
+  .square {
+    justify-self: stretch;
+    border: 2px dashed black;
+    cursor: pointer;
+
+    &.active {
+      background-color: lightgreen;
+      border: 3px solid black;
+    }
+  }
+}
+
+.programmers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
